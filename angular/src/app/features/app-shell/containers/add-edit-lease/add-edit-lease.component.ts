@@ -38,9 +38,18 @@ export class AddEditLease extends SimpleModalComponent<{type: string; data: any}
     formData.append('lease_start_date',this.lease_start_date);
     formData.append('lease_end_date',this.lease_end_date);
     if(this.type == 'add'){
-      this.close();
+      this.featureService.postFeature('lease', formData).subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
     } else if (this.type == 'edit'){
-      this.close();
-    }
+      this.featureService.putFeature('lease',this.data.id,formData)
+      .subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
   }
+}
 }
