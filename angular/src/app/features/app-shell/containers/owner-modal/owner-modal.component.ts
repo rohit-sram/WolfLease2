@@ -12,6 +12,7 @@ export class OwnerModalComponent extends SimpleModalComponent<{type: string; dat
 
   type!: string;
   data!: any;
+  searchvalue!: any;
 
   constructor(private readonly featureService: FeatureService,
             private readonly modalService: SimpleModalService) {
@@ -22,12 +23,19 @@ export class OwnerModalComponent extends SimpleModalComponent<{type: string; dat
   }
 
   search(event: any){
-    console.log(event);
-    this.modalService.addModal(RenderDataComponent,{type: this.type,data: this.data});
+    this.featureService.searchFeature(this.type,this.searchvalue)
+    .subscribe((searchdata: any) => {
+      this.modalService.addModal(RenderDataComponent,{type: this.type,data: searchdata});
+    })
   }
 
   addFeature(){
       this.modalService.addModal(AddEditOwner,{type: 'add', data: {}})
   }
+
+  onSearch(event: any){
+    this.searchvalue = event.target.value;
+  }
+
 
 }
