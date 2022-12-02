@@ -7,3 +7,14 @@
         <br>
         <label>Start Date:</label>
         <input (change)="onChangeStartDate($event)" [value]="lease_start_date" type="date" id="lease_start" />
+        <br>
+        <label>End Date:</label>
+        <input (change)="onChangeEndDate($event)" [value]="lease_end_date" type="date" id="lease-end"/>
+        <br>
+    </div>
+
+    <div class="modal-footer" footer>
+        <button class="btn" (click)="submit()">Done</button>
+    </div>
+
+</div>
