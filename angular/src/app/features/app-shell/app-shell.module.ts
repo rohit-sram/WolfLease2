@@ -23,4 +23,34 @@ const routes: Routes = [
   {path: '',component: AppShellComponent }
 ];
 
+@NgModule({
+  imports: [RouterModule.forChild(appShellRoutes),
+  SimpleModalModule.forRoot({container: document.body}, {
+    ...defaultSimpleModalOptions, ...{
+      draggable: false,
+      closeOnEscape: true,
+      closeOnClickOutside: false
+    }
+  }),
+  CommonModule],
+  exports: [RouterModule],
+  declarations: [
+    AppShellComponent,
+    HomePageComponent,
+    FlatModalComponent,
+    RenderDataComponent,
+    AddEditApartment,
+    AddEditFlat,
+    AddEditLease,
+    AddEditOwner,
+    AddEditUser,
+    UserModalComponent,
+    OwnerModalComponent,
+    LeaseModalComponent,
+    ApartmentModalComponent
+  ],
+  providers: [
+    FeatureService
+  ]
+})
 export class AppShellModule { }
