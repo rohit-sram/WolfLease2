@@ -25,5 +25,31 @@ export class AddEditApartment extends SimpleModalComponent<{type: string; data: 
       this.facilities = this.data.facilities;
       this.ownerid = this.data.owner_id;
     }
-  } 
+  }
+
+  onAddressChange(event: any){
+    this.address = event.target.value;
+  }
+
+  onFacilitiesChange(event: any){
+    this.facilities = event.target.value;
+  }
+
+  onOwnerChange(event: any){
+    this.ownerid = event.target.value;
+  }
+
+  submit(){
+    let formData = new FormData();
+      formData.append('address',this.address);
+      formData.append('facilities',this.facilities);
+      formData.append('owner_id',this.ownerid);
+    if(this.type == 'add'){
+      this.close();
+    } else if (this.type == 'edit'){
+      this.close();
+    }
+  }
+
+  
 }
