@@ -8,3 +8,13 @@
         <label>Contact Number:</label>
         <input type="text" [value]="email" (change)="onChangeEmail($event)" placeholder="Enter Phone Number..." id="owner_number"/>
         <br>
+        <label>Email:</label>
+        <input type="text" [value]="number" (change)="onChangeNumber($event)" placeholder="Enter Email..." id="owner-email"/>
+        <br>
+    </div>
+
+    <div footer class="modal-footer">
+        <button class="btn" (click)="submit()">Done</button>
+    </div>
+
+</div>
