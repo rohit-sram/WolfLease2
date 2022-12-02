@@ -1,0 +1,56 @@
+<div class="modal-content">
+
+    <div class="modal-header" header><b>Search Results...</b></div>
+
+    <div class="modal-body" body>
+        <div *ngIf="type=='users'">
+            <br>
+            <span *ngIf="data.length===0">No Users Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>User ID</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>User Type</th>
+                    <th>Date of Birth</th>
+                    <th>Smoking Preference</th>
+                    <th>Drinking Preference</th>
+                    <th>Veg Preference</th>
+                    <th>Flat ID</th>
+                </tr>
+                <ng-container *ngFor="let d of data;let i=index">
+                    <tr>
+                        <td>{{d.id}}</td>
+                        <td>{{d.contact_number}}</td>
+                        <td>{{d.contact_email}}</td>
+                        <td>{{d.user_type}}</td>
+                        <td>{{d.dob}}</td>
+                        <td>{{d.gender}}</td>
+                        <td>{{d.pref_smoking}}</td>
+                        <td>{{d.pref_drinking}}</td>
+                        <td>{{d.pref_veg}}</td>
+                        <td>{{d.flat_id}}</td>
+                    </tr>
+                </ng-container>
+            </table>
+        </div>
+        
+        <div *ngIf="type=='owners'">
+            <span *ngIf="data.length===0">No Owners Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>Owner ID</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+                <ng-container *ngFor="let d of data;let i=index">
+                    <tr>
+                        <td>{{d.id}}</td>
+                        <td>{{d.contact_email}}</td>
+                        <td>{{d.contact_number}}</td>
+                    </tr>
+                </ng-container>
+            </table>
+        </div>
+
+</div>
