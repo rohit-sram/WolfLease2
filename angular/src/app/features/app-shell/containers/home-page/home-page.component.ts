@@ -30,7 +30,8 @@ export class HomePageComponent implements OnInit {
     }
 ]
 
-
+  this.featureService.getFeature(type)
+    .subscribe((data: any) => {
     if(type == 'owners'){
       this.simpleModalService.addModal(OwnerModalComponent,{type: type,data: data});
     } else if (type == 'flats'){
@@ -42,6 +43,7 @@ export class HomePageComponent implements OnInit {
     } else if (type == 'lease'){
       this.simpleModalService.addModal(LeaseModalComponent,{type: type, data: data})
     }
-  }
+  });
 
+  }
 }
