@@ -1,0 +1,10 @@
+<div class="modal-content">
+
+    <div header class="modal-header" *ngIf="type=='add'"><b>Add Owner</b></div>
+    <div header class="modal-header" *ngIf="type=='edit'"><b>Update Owner</b></div>
+
+    <div body class="modal-body">
+        <br>
+        <label>Contact Number:</label>
+        <input type="text" [value]="email" (change)="onChangeEmail($event)" placeholder="Enter Phone Number..." id="owner_number"/>
+        <br>
