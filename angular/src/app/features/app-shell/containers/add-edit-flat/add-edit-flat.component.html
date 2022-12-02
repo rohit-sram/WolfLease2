@@ -5,12 +5,6 @@
 
     <div body class="modal-body">
         <br>
-        <label>Availability:</label>
-        <input type="radio" [checked]="availability" (change)="availability=!availability" id="flat_availability" />
-        <span>True</span>
-        <input type="radio" [checked]="!availability" (change)="availability!=availability" id="flat_availability" />
-        <span>False</span>
-        <br>
         <label>Associated Apartment:</label>
         <select (change)="onChangeApartment($event)" [value]="apartment" id="flat-apt">
             <option *ngFor="let a of apt_data">{{a.id}}</option>
