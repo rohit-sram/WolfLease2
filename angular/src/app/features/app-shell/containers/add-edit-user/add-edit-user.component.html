@@ -21,27 +21,27 @@
         <input [value]="dob" (change)="onChangeDate($event)" type="date" id="dob"/>
         <br>
         <label>Gender:</label>
-        <input [checked]="gender === 'M'" (change)="gender = 'F'" type="radio"/>
+        <input [checked]="gender" (change)="gender = !gender" type="radio"/>
         <span>Male</span>
-        <input [checked]="gender === 'F'" (change)="gender = 'M'" type="radio">
+        <input [checked]="!gender" (change)="gender = !gender" type="radio">
         <span>Female</span>
         <br>
         <label>Smoking Preference:</label>
-        <input [checked]="smoking_pref === 'Y'" (change)="smoking_pref='N'" type="radio"/>
+        <input [checked]="smoking_pref" (change)="smoking_pref=!smoking_pref" type="radio"/>
         <span>True</span>
-        <input [checked]="smoking_pref === 'N'" (change)="smoking_pref='F'" type="radio">
+        <input [checked]="!smoking_pref" (change)="smoking_pref=!smoking_pref" type="radio">
         <span>False</span>
         <br>
         <label>Drinking Preference:</label>
-        <input [checked]="drinking_pref === 'Y'" (change)="drinking_pref='N'" type="radio"/>
+        <input [checked]="drinking_pref" (change)="drinking_pref=!drinking_pref" type="radio"/>
         <span>True</span>
-        <input [checked]="drinking_pref === 'N'" (change)="drinking_pref='Y'" type="radio">
+        <input [checked]="!drinking_pref" (change)="drinking_pref=!drinking_pref" type="radio">
         <span>False</span>
         <br>
         <label>Veg Preference:</label>
-        <input [checked]="veg_pref === 'Y'" (change)="veg_pref='N'" type="radio"/>
+        <input [checked]="veg_pref" (change)="veg_pref=!veg_pref" type="radio"/>
         <span>True</span>
-        <input [checked]="veg_pref === 'N'" (change)="veg_pref='Y'" type="radio">
+        <input [checked]="!veg_pref" (change)="veg_pref=!veg_pref" type="radio">
         <span>False</span>
         <br>
     </div>
