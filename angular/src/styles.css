@@ -96,3 +96,24 @@
   table {
     width: fit-content;
   }
+
+  .btn {
+    -webkit-border-radius: 7;
+    -moz-border-radius: 7;
+    border-radius: 7px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 14px;
+    background: #666666;
+    padding: 6px 7px 8px 10px;
+    text-decoration: none;
+    text-align: center;
+    margin: 5px 5px;
+    border: none;
+    height: 30px;
+  }
+  
+  .btn:hover {
+    background: #333333;
+    text-decoration: none;
+  }
