@@ -17,8 +17,23 @@ export class AddEditFlat extends SimpleModalComponent<{type: string; data: any},
   rent: any = '';
   floor_number: any = '';
 
+  apt_data: any;
+  lease_data: any;
+
   constructor(private readonly featureService: FeatureService) {
     super()
+
+    this.featureService.getFeature('apartments')
+    .subscribe((resp: any) => {
+      this.apt_data = resp;
+      this.apartment = resp[0].id
+    })
+
+    this.featureService.getFeature('lease')
+    .subscribe((resp: any) => {
+      this.lease_data = resp;
+      this.lease = resp[0].id
+    })
   }
 
   ngOnInit(): void {
@@ -64,6 +79,7 @@ export class AddEditFlat extends SimpleModalComponent<{type: string; data: any},
       this.featureService.putFeature('flats',this.data.id,formData)
       .subscribe((data: any) => {
         if(data){
+          this.result = data
           this.close();
         }
       })
