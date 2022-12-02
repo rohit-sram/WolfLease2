@@ -4,7 +4,7 @@
     <div body class="modal-body" style="width: 880px;">
         <br>
         <div id="search-form">
-            <input id="search-bar" style="height: 30px" placeholder="Search..." (keydown)="search($event)"/>
+            <input id="search-bar" style="height: 30px" (change)="onSearch($event)" placeholder="Search..."/>
             <button class="btn" (click)="search($event)">Search</button>
         </div>
         <br>
