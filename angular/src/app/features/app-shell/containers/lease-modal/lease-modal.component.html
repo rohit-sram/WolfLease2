@@ -1,0 +1,19 @@
+<div class="modal-content modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-header" header><b>Lease</b></div>
+
+    <div body class="modal-body">
+        <br>
+        <div id="search-form">
+            <input id="search-bar" style="height: 30px" placeholder="Search..." (keydown)="search($event)"/>
+            <button class="btn" (click)="search($event)">Search</button>
+        </div>
+        <br>
+        <div id="data-form">
+            <br>
+            <span *ngIf="data.length===0">No Lease Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>Lease ID</th>
+                    <th>Start Data</th>
+                    <th>End Date</th>
+                </tr>
