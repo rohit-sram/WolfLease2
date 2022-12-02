@@ -25,11 +25,11 @@ export class FeatureService {
     return this.httpClient.delete(appShellEndpoints.putDeleteFeature(type,id));
   }
 
-  putFeature(type: string,id: any, data: FormData){
-    return this.httpClient.put<any>(appShellEndpoints.putDeleteFeature(type,id),{data});
+  putFeature(type: string,id: any, data: any){
+    return this.httpClient.put<any>(appShellEndpoints.putDeleteFeature(type,id),data);
   }
 
-  postFeature(type: string,id: any, data: FormData){
-    return this.httpClient.post<any>(appShellEndpoints.getPostSearchFeature(type),{data});
+  postFeature(type: string, data: any){
+    return this.httpClient.post<any>(appShellEndpoints.getPostSearchFeature(type),data);
   }
 }
