@@ -40,6 +40,9 @@ export class RenderDataComponent extends SimpleModalComponent<{type: string; dat
   }
 
   deleteFeature(){
-
+    this.featureService.deleteFeature(this.type,this.data[0].id)
+      .subscribe((data: any) => {
+        this.close();
+      });
   }
 }
