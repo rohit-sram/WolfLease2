@@ -16,10 +16,11 @@ export class AddEditUser extends SimpleModalComponent<{type: string; data: any},
   email: any = '';
   usertype: any = '';
   dob: any = '2022-01-01';
-  gender: any = ''; 
-  smoking_pref: any = '';
-  drinking_pref: any = '';
-  veg_pref: any = '';
+  gender!: boolean; 
+  smoking_pref!: boolean;
+  drinking_pref!: boolean;
+  veg_pref!: boolean;
+  password!: any
 
 
   constructor(private readonly featureService: FeatureService) {
@@ -67,14 +68,24 @@ export class AddEditUser extends SimpleModalComponent<{type: string; data: any},
     formData.append('contact_email',this.email);
     formData.append('user_type',this.usertype);
     formData.append('dob',this.dob);
-    formData.append('gender',this.gender);
-    formData.append('pref_smoking',this.smoking_pref);
-    formData.append('pref_drinking',this.drinking_pref);
-    formData.append('pref_veg',this.veg_pref);
+    formData.append('gender',this.gender ? 'M' : 'F');
+    formData.append('pref_smoking',this.smoking_pref ? 'Y' : 'N');
+    formData.append('pref_drinking',this.drinking_pref ? 'Y' : 'N');
+    formData.append('pref_veg',this.veg_pref ? 'Y' : 'N');
+    formData.append('password', this.password);
     if(this.type == 'add'){
-      this.close;
-    } else if(this.type == 'edit'){
-      this.close;
+      this.featureService.postFeature('users', formData).subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
+    } else if (this.type == 'edit'){
+      this.featureService.putFeature('users',this.data.id,formData)
+      .subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
     }
   }
 }
