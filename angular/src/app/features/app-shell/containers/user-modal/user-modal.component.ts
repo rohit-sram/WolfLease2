@@ -17,4 +17,17 @@ export class UserModalComponent extends SimpleModalComponent<{type: string; data
             private readonly modalService: SimpleModalService) {
     super()
   }
+
+  ngOnInit(): void {
+  }
+
+  search(event: any){
+    console.log(event);
+    this.modalService.addModal(RenderDataComponent,{type: this.type,data: this.data});
+  }
+
+  addFeature(){
+    this.modalService.addModal(AddEditUser,{type:'add', data: {} })
+  }
+
 }
