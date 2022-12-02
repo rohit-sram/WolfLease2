@@ -18,5 +18,16 @@ export class OwnerModalComponent extends SimpleModalComponent<{type: string; dat
     super()
   }
 
+  ngOnInit(): void {
+  }
+
+  search(event: any){
+    console.log(event);
+    this.modalService.addModal(RenderDataComponent,{type: this.type,data: this.data});
+  }
+
+  addFeature(){
+      this.modalService.addModal(AddEditOwner,{type: 'add', data: {}})
+  }
 
 }
