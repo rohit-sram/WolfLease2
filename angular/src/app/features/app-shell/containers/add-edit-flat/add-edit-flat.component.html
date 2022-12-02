@@ -1,0 +1,16 @@
+<div class="modal-content">
+
+    <div header class="modal-header" *ngIf="type=='add'"><b>Add Flat</b></div>
+    <div header class="modal-header" *ngIf="type=='edit'"><b>Update Flat</b></div>
+
+    <div body class="modal-body">
+        <br>
+        <label>Availability:</label>
+        <input type="radio" [checked]="availability" (change)="availability=!availability" id="flat_availability" />
+        <span>True</span>
+        <input type="radio" [checked]="availability" (change)="availability!=availability" id="flat_availability" />
+        <span>False</span>
+        <br>
+        <label>Associated Apartment:</label>
+        <input type="text" (change)="onChangeApartment($event)" [value]="apartment" placeholder="Enter Apartment..." id="flat-apt"/>
+    
