@@ -1,0 +1,10 @@
+<div class="modal-content">
+    <div header class="modal-header" *ngIf="type=='add'"><b>Add Apartment</b></div>
+    <div header class="modal-header" *ngIf="type=='edit'"><b>Update Apartment</b></div>
+
+    <div body class="modal-body">
+        <br>
+        <label>Address:</label>
+        <input type="text" [value]="address" (change)="onAddressChange($event)" placeholder="Enter Address Here..." id="apartment-address" />
+        <br>
+        <label>Facilities:</label>
