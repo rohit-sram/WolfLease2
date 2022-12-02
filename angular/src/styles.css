@@ -75,3 +75,24 @@
     border-bottom: 1px solid #cecece;
   }
   
+  .modal-header {
+    border-bottom: 1px solid #cecece;
+  }
+  
+  .modal-body {
+    padding: 16px;
+    overflow-y: auto;
+    max-width: 560px;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #cecece;
+  }
+
+  table, th, td {
+    border:1px solid black;
+  }
+
+  table {
+    width: fit-content;
+  }
