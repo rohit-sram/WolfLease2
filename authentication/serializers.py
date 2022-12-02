@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
+from django.contrib.auth import authenticate
 
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
@@ -42,3 +43,20 @@ class RegisterSerializer(serializers.ModelSerializer):
         user.save()
         
         return user
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField(required=True)
+    password = serializers.CharField(required=True, write_only=True)
+
+    class Meta:
+        model = User
+        fields = ('username','password')
+
+    def validate(self, validated_data):
+        user = authenticate(username=validated_data['username'], password=validated_data['password'])
+
+        if not user:
+            raise serializers.ValidationError({"error": "User not found"})
+        else:
+            validated_data['user'] = user
+            return validated_data
