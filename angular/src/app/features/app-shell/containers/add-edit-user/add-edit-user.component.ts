@@ -39,4 +39,42 @@ export class AddEditUser extends SimpleModalComponent<{type: string; data: any},
       this.veg_pref = this.data.pref_veg;
     }
   }
+
+  onChangeFlat(event: any){
+    this.flat = event.target.value;
+  }
+
+  onChangeNumber(event: any){
+    this.number = event.target.value;
+  }
+
+  onChangeEmail(event: any){
+    this.email = event.target.value;
+  }
+
+  onChangeDate(event: any){
+    this.dob = event.target.value;
+  }
+
+  onChangeType(event: any){
+    this.usertype = event.target.value;
+  }
+
+  submit(){
+    let formData = new FormData();
+    formData.append('flat_id',this.flat);
+    formData.append('contact_number',this.number);
+    formData.append('contact_email',this.email);
+    formData.append('user_type',this.usertype);
+    formData.append('dob',this.dob);
+    formData.append('gender',this.gender);
+    formData.append('pref_smoking',this.smoking_pref);
+    formData.append('pref_drinking',this.drinking_pref);
+    formData.append('pref_veg',this.veg_pref);
+    if(this.type == 'add'){
+      this.close;
+    } else if(this.type == 'edit'){
+      this.close;
+    }
+  }
 }
