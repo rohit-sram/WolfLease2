@@ -52,5 +52,76 @@
                 </ng-container>
             </table>
         </div>
+        
+        <div *ngIf="type=='lease'">
+            <span *ngIf="data.length===0">No Lease Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>Lease ID</th>
+                    <th>Start Data</th>
+                    <th>End Date</th>
+                </tr>
+                <ng-container *ngFor="let d of data;let i=index">
+                    <tr>
+                        <td>{{d.id}}</td>
+                        <td>{{d.lease_start_date}}</td>
+                        <td>{{d.lease_end_date}}</td>
+                    </tr>
+                </ng-container>
+            </table>
+        </div>
+        
+        <div *ngIf="type=='flats'">
+            <span *ngIf="data.length===0">No Flats Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>Flat ID</th>
+                    <th>Availability</th>
+                    <th>Rent per Room</th>
+                    <th>Floor Number</th>
+                    <th>Associated Apt ID</th>
+                    <th>Lease ID</th>
+                </tr>
+                <ng-container *ngFor="let d of data;let i=index">
+                    <tr>
+                        <td>{{d.id}}</td>
+                        <td>{{d.availability}}</td>
+                        <td>{{d.rent_per_room}}</td>
+                        <td>{{d.floor_number}}</td>
+                        <td>{{d.associated_apt_id}}</td>
+                        <td>{{d.lease_id}}</td>
+                    </tr>
+                </ng-container>
+            </table>
+        </div>
+        
+        <div *ngIf="type=='apartments'">
+            <span *ngIf="data.length===0">No Apartments Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>Apartment ID</th>
+                    <th>Address</th>
+                    <th>Facilities</th>
+                    <th>Owner ID</th>
+                </tr>
+                <ng-container *ngFor="let d of data;let i=index">
+                    <tr>
+                        <td>{{d.id}}</td>
+                        <td>{{d.address}}</td>
+                        <td>{{d.facilities}}</td>
+                        <td>{{d.owner_id}}</td>
+                    </tr>
+                </ng-container>
+            </table>
+        </div>
+        
+        <br>
+        <button class="btn" *ngIf="data.length === 1" (click)="updateFeature()">Update...</button>
+        <button class="btn" *ngIf="data.length === 1" (click)="deleteFeature()">Delete...</button>
+    </div>
+
+    <div class="modal-footer" footer>
+        <button class="btn" (click)="close()">Close</button>
+    </div>
 
 </div>
