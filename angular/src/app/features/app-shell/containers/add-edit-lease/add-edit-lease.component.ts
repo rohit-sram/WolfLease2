@@ -24,4 +24,23 @@ export class AddEditLease extends SimpleModalComponent<{type: string; data: any}
       this.lease_end_date = this.data.lease_end_date;
     }
   }
+
+  onChangeStartDate(event: any){
+    this.lease_start_date = event.target.value;
+  }
+
+  onChangeEndDate(event: any){
+    this.lease_end_date = event.target.value;
+  }
+
+  submit(){
+    let formData = new FormData();
+    formData.append('lease_start_date',this.lease_start_date);
+    formData.append('lease_end_date',this.lease_end_date);
+    if(this.type == 'add'){
+      this.close();
+    } else if (this.type == 'edit'){
+      this.close();
+    }
+  }
 }
