@@ -6,7 +6,9 @@
     <div body class="modal-body">
         <br>
         <label>Flat ID:</label>
-        <input [value]="flat" (change)="onChangeFlat($event)" type="text" placeholder="Enter Flat..." id="user_flat" />
+        <select [value]="flat" (change)="onChangeFlat($event)" id="user_flat">
+            <option *ngFor="let f of flatdata">{{f.id}}</option>
+        </select>
         <br>
         <label>Contact Number:</label>
         <input [value]="number" (change)="onChangeNumber($event)" type="text" placeholder="Enter Phone Number..." id="user_number"/>
@@ -48,6 +50,7 @@
 
     <div class="modal-footer" footer>
         <button class="btn" (click)="submit()">Done</button>
+        <button class="btn" (click)="close()">Close</button>
     </div>
 
 </div>
