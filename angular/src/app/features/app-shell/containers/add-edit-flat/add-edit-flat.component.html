@@ -12,10 +12,14 @@
         <span>False</span>
         <br>
         <label>Associated Apartment:</label>
-        <input type="text" (change)="onChangeApartment($event)" [value]="apartment" placeholder="Enter Apartment..." id="flat-apt"/>
+        <select (change)="onChangeApartment($event)" [value]="apartment" id="flat-apt">
+            <option *ngFor="let a of apt_data">{{a.id}}</option>
+        </select>
         <br>
         <label>Lease:</label>
-        <input type="text" (change)="onChangeLease($event)" [value]="lease" placeholder="Enter Lease..." id="flat-lease"/>
+        <select (change)="onChangeLease($event)" [value]="lease" id="flat-lease">
+            <option *ngFor="let l of lease_data">{{l.id}}</option>
+        </select>
         <br>
         <label>Rent:</label>
         <input type="number" (change)="onChangeRent($event)" [value]="rent" placeholder="Enter Rent..." id="flat-rent"/>
@@ -26,6 +30,7 @@
 
     <div class="modal-footer" footer>
         <button class="btn" (click)="submit()">Done</button>
+        <button class="btn" (click)="close()">Close</button>
     </div>
 
 </div>
