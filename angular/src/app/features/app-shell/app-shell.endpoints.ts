@@ -1,6 +1,6 @@
 import { environment } from "src/environments/environment";
 
-const base = environment.apiUrl;
+const base = 'http://localhost:8000'
 
 export const appShellEndpoints = {
     getPostSearchFeature: (type: string) => `${base}/${type}`,
