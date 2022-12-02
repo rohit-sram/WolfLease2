@@ -21,15 +21,6 @@ export class HomePageComponent implements OnInit {
   }
 
   goToFeature(type: string) {
-   let data = [
-    {
-        "id": "01f63923-61f9-4d33-969f-c0b4be7ebb14",
-        "address": "2343",
-        "facilities": "Utilities Included",
-        "owner_id": "e1e1253b-264c-4589-9dcc-2d411acc446f"
-    }
-]
-
   this.featureService.getFeature(type)
     .subscribe((data: any) => {
     if(type == 'owners'){
