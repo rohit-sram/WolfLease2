@@ -28,20 +28,36 @@ export class RenderDataComponent extends SimpleModalComponent<{type: string; dat
   updateFeature(){
     if(this.type=='owners'){
         this.modalService.addModal(AddEditOwner,{type: 'edit',data: this.data[0]})
+        .subscribe((result: any) => {
+          this.data = [result];
+        })
       } else if(this.type == 'flats'){
         this.modalService.addModal(AddEditFlat,{type: 'edit', data: this.data[0]})
+        .subscribe((result: any) => {
+          this.data = [result];
+        })
       } else if(this.type == 'apartments'){
         this.modalService.addModal(AddEditApartment,{type: 'edit', data: this.data[0]})
+        .subscribe((result: any) => {
+          this.data = [result];
+        })
       } else if(this.type == 'users'){
         this.modalService.addModal(AddEditUser,{type:'edit',data: this.data[0] })
+        .subscribe((result: any) => {
+          this.data = [result];
+        })
       } else if(this.type == 'lease'){
         this.modalService.addModal(AddEditLease, {type: 'edit', data: this.data[0]})
+        .subscribe((result: any) => {
+          this.data = [result];
+        })
       }
   }
 
   deleteFeature(){
     this.featureService.deleteFeature(this.type,this.data[0].id)
       .subscribe((data: any) => {
+        this.data = [];
         this.close();
       });
   }
