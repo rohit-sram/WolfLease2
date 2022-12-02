@@ -13,4 +13,19 @@
         <br>
         <label>Associated Apartment:</label>
         <input type="text" (change)="onChangeApartment($event)" [value]="apartment" placeholder="Enter Apartment..." id="flat-apt"/>
-    
+        <br>
+        <label>Lease:</label>
+        <input type="text" (change)="onChangeLease($event)" [value]="lease" placeholder="Enter Lease..." id="flat-lease"/>
+        <br>
+        <label>Rent:</label>
+        <input type="number" (change)="onChangeRent($event)" [value]="rent" placeholder="Enter Rent..." id="flat-rent"/>
+        <br>
+        <label>Floor Number:</label>
+        <input type="number" (change)="onChangeFloor($event)" [value]="floor_number" placeholder="Enter Floor Number..." id="flat-floor"/>
+    </div>
+
+    <div class="modal-footer" footer>
+        <button class="btn" (click)="submit()">Done</button>
+    </div>
+
+</div>
