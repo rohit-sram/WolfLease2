@@ -20,4 +20,16 @@ export class FeatureService {
       }
     });
   }
+
+  deleteFeature(type: string,id: any){
+    return this.httpClient.delete(appShellEndpoints.putDeleteFeature(type,id));
+  }
+
+  putFeature(type: string,id: any, data: FormData){
+    return this.httpClient.put<any>(appShellEndpoints.putDeleteFeature(type,id),{data});
+  }
+
+  postFeature(type: string,id: any, data: FormData){
+    return this.httpClient.post<any>(appShellEndpoints.getPostSearchFeature(type),{data});
+  }
 }
