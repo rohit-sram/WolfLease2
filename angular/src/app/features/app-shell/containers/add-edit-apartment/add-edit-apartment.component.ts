@@ -15,8 +15,16 @@ export class AddEditApartment extends SimpleModalComponent<{type: string; data: 
   facilities: string = '';
   ownerid: string = '';
 
+  owner_data: any;
+
   constructor(private readonly featureService: FeatureService) {
     super()
+
+    this.featureService.getFeature('owners')
+    .subscribe((resp: any) => {
+      this.owner_data = resp;
+      this.ownerid = resp[0].id;
+    })
   }
 
   ngOnInit(): void {
@@ -46,7 +54,7 @@ export class AddEditApartment extends SimpleModalComponent<{type: string; data: 
       formData.append('owner_id',this.ownerid);
     if(this.type == 'add'){
       this.featureService.postFeature('apartments', formData).subscribe((data: any) => {
-        if(data){
+       if(data){
           this.close();
         }
       })
@@ -54,6 +62,7 @@ export class AddEditApartment extends SimpleModalComponent<{type: string; data: 
       this.featureService.putFeature('apartments',this.data.id,formData)
       .subscribe((data: any) => {
         if(data){
+          this.result = data
           this.close();
         }
       })
