@@ -7,5 +7,11 @@ export const appShellRoutes: Routes = [
   {
     path: '',
     component: AppShellComponent,
+    children: [{
+
+      path: '',
+      component: HomePageComponent
+
+    }]
   }
  ];
