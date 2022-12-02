@@ -55,10 +55,19 @@ export class AddEditFlat extends SimpleModalComponent<{type: string; data: any},
     formData.append('lease_id', this.lease);
     formData.append('floor_number',this.floor_number);
     if(this.type == 'add'){
-      this.close();
+      this.featureService.postFeature('flats', formData).subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
     } else if (this.type == 'edit'){
-      this.close();
-    }
+      this.featureService.putFeature('flats',this.data.id,formData)
+      .subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
   }
+}
 
 }
