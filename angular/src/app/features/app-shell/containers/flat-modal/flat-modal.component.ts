@@ -13,6 +13,8 @@ export class FlatModalComponent extends SimpleModalComponent<{type: string; data
   type!: string;
   data!: any;
 
+  searchvalue!: any;
+
   constructor(private readonly featureService: FeatureService,
             private readonly modalService: SimpleModalService) {
     super()
@@ -23,23 +25,18 @@ export class FlatModalComponent extends SimpleModalComponent<{type: string; data
   }
 
   search(event: any){
-    console.log(event);
-    let searchdata = [
-      {
-          "id": "76f96871-31e5-477b-a883-2a0bd7dd580e",
-          "availability": false,
-          "rent_per_room": 600,
-          "floor_number": 1,
-          "associated_apt_id": "01f63923-61f9-4d33-969f-c0b4be7ebb14",
-          "lease_id": "c8063dab-d631-4c1e-8939-c037313ce4a7"
-      }
-  ]
-  
-    this.modalService.addModal(RenderDataComponent,{type: this.type,data: searchdata});
+    this.featureService.searchFeature(this.type,this.searchvalue)
+    .subscribe((searchdata: any) => {
+      this.modalService.addModal(RenderDataComponent,{type: this.type,data: searchdata});
+    })
   }
 
   addFeature(){
       this.modalService.addModal(AddEditFlat,{type: 'add', data: {}})
+  }
+
+  onSearch(event: any){
+    this.searchvalue = event.target.value;
   }
 
 }
