@@ -25,3 +25,10 @@ class LoginView(views.APIView):
         login(request, user)
         content = {'message': 'Login successfull', 'token' : token}
         return Response(content)
+
+class LogoutView(views.APIView):
+
+    def get(self, request):
+        request.user.auth_token.delete()
+        content = {'message': 'Logout successfull'}
+        return Response(content)
