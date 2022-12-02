@@ -45,9 +45,18 @@ export class AddEditApartment extends SimpleModalComponent<{type: string; data: 
       formData.append('facilities',this.facilities);
       formData.append('owner_id',this.ownerid);
     if(this.type == 'add'){
-      this.close();
+      this.featureService.postFeature('apartments', formData).subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
     } else if (this.type == 'edit'){
-      this.close();
+      this.featureService.putFeature('apartments',this.data.id,formData)
+      .subscribe((data: any) => {
+        if(data){
+          this.close();
+        }
+      })
     }
   }
 
