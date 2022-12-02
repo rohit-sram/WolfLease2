@@ -12,6 +12,7 @@ export class ApartmentModalComponent extends SimpleModalComponent<{type: string;
 
   type!: string;
   data!: any;
+  searchvalue!: any;
 
   constructor(private readonly featureService: FeatureService,
             private readonly modalService: SimpleModalService) {
@@ -22,11 +23,18 @@ export class ApartmentModalComponent extends SimpleModalComponent<{type: string;
   }
 
   search(event: any){
-    this.modalService.addModal(RenderDataComponent,{type: this.type,data: this.data});
+    this.featureService.searchFeature(this.type,this.searchvalue)
+    .subscribe((searchdata: any) => {
+      this.modalService.addModal(RenderDataComponent,{type: this.type,data: searchdata});
+    })
   }
   
   addFeature(){
       this.modalService.addModal(AddEditApartment,{type: 'add', data: {}})
   }
+  onSearch(event: any){
+    this.searchvalue = event.target.value;
+  }
+
 
 }
