@@ -31,4 +31,34 @@ export class AddEditFlat extends SimpleModalComponent<{type: string; data: any},
     }
   }
 
+  onChangeApartment(event: any){
+    this.apartment = event.target.value;
+  }
+
+  onChangeLease(event: any){
+    this.lease = event.target.value;
+  }
+
+  onChangeRent(event: any){
+    this.rent = event.target.value;
+  }
+
+  onChangeFloor(event: any){
+    this.floor_number = event.target.value;
+  }
+
+  submit(){
+    let formData = new FormData();
+    formData.append('availability',this.availability ? 'true' : 'false');
+    formData.append('associated_apt_id',this.apartment);
+    formData.append('rent_per_room', this.rent);
+    formData.append('lease_id', this.lease);
+    formData.append('floor_number',this.floor_number);
+    if(this.type == 'add'){
+      this.close();
+    } else if (this.type == 'edit'){
+      this.close();
+    }
+  }
+
 }
