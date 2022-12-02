@@ -8,7 +8,7 @@
         <label>Availability:</label>
         <input type="radio" [checked]="availability" (change)="availability=!availability" id="flat_availability" />
         <span>True</span>
-        <input type="radio" [checked]="availability" (change)="availability!=availability" id="flat_availability" />
+        <input type="radio" [checked]="!availability" (change)="availability!=availability" id="flat_availability" />
         <span>False</span>
         <br>
         <label>Associated Apartment:</label>
