@@ -45,7 +45,13 @@ export class AddEditOwner extends SimpleModalComponent<{type: string; data: any}
         }
       })
     } else if (this.type == 'edit'){
-      this.close;
+      this.featureService.putFeature('owners',this.data.id,formData)
+      .subscribe((data: any) => {
+        if(data){
+          this.result = data
+          this.close();
+        }
+      })
     }
   }
 }
