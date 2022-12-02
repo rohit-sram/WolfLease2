@@ -14,7 +14,6 @@
             <table *ngIf="data.length>0">
                 <tr>
                     <th>Flat ID</th>
-                    <th>Availability</th>
                     <th>Rent per Room</th>
                     <th>Floor Number</th>
                     <th>Associated Apt ID</th>
@@ -23,7 +22,6 @@
                 <ng-container *ngFor="let d of data;let i=index">
                     <tr>
                         <td>{{d.id}}</td>
-                        <td>{{d.availability}}</td>
                         <td>{{d.rent_per_room}}</td>
                         <td>{{d.floor_number}}</td>
                         <td>{{d.associated_apt_id}}</td>
