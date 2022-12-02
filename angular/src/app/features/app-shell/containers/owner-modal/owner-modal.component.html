@@ -1,0 +1,19 @@
+<div class="modal-content">
+    <div class="modal-header" header><b>Owners</b></div>
+
+    <div body class="modal-body">
+        <br>
+        <div id="search-form">
+            <input id="search-bar" style="height: 30px" placeholder="Search..." (keydown)="search($event)"/>
+            <button class="btn" (click)="search($event)">Search</button>
+        </div>
+        <br>
+        <div id="data-form">
+            <br>
+            <span *ngIf="data.length===0">No Owners Available</span>
+            <table *ngIf="data.length>0">
+                <tr>
+                    <th>Owner ID</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
