@@ -11,7 +11,7 @@ export class AddEditFlat extends SimpleModalComponent<{type: string; data: any},
   type!: string;
   data!: any;
 
-  availability!: boolean;
+  availability: boolean = false;
   apartment: any = '';
   lease: any = '';
   rent: any = '';
