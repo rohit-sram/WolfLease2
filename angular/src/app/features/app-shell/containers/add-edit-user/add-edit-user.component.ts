@@ -20,11 +20,19 @@ export class AddEditUser extends SimpleModalComponent<{type: string; data: any},
   smoking_pref!: boolean;
   drinking_pref!: boolean;
   veg_pref!: boolean;
-  password!: any
+  password!: any;
+
+  flatdata: any;
 
 
   constructor(private readonly featureService: FeatureService) {
     super()
+    
+    this.featureService.getFeature('flats')
+    .subscribe((resp: any) => {
+      this.flatdata = resp;
+      this.flat = resp[0].id;
+    })
   }
 
   ngOnInit(): void {
@@ -83,6 +91,7 @@ export class AddEditUser extends SimpleModalComponent<{type: string; data: any},
       this.featureService.putFeature('users',this.data.id,formData)
       .subscribe((data: any) => {
         if(data){
+          this.result = data;
           this.close();
         }
       })
