@@ -18,4 +18,15 @@ export class ApartmentModalComponent extends SimpleModalComponent<{type: string;
     super()
   }
 
+  ngOnInit(): void {
+  }
+
+  search(event: any){
+    this.modalService.addModal(RenderDataComponent,{type: this.type,data: this.data});
+  }
+  
+  addFeature(){
+      this.modalService.addModal(AddEditApartment,{type: 'add', data: {}})
+  }
+
 }
