@@ -1,0 +1,9 @@
+<div class="modal-content">
+
+    <div header class="modal-header" *ngIf="type=='add'"><b>Add Lease</b></div>
+    <div header class="modal-header" *ngIf="type=='edit'"><b>Update Lease</b></div>
+
+    <div body class="modal-body">
+        <br>
+        <label>Start Date:</label>
+        <input (change)="onChangeStartDate($event)" [value]="lease_start_date" type="date" id="lease_start" />
