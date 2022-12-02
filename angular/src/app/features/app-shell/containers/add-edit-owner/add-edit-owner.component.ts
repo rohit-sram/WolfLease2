@@ -24,4 +24,24 @@ export class AddEditOwner extends SimpleModalComponent<{type: string; data: any}
       this.email = this.data.contact_email;
     }
   }
+
+  onChangeEmail(event: any){
+    this.email = event.target.value;
+  }
+
+  onChangeNumber(event: any){
+    this.number = event.target.value;
+  }
+
+  submit(){
+    let formData = new FormData();
+    formData.append('contact_number',this.number);
+    formData.append('contact_email',this.email);
+    formData.append('password',this.data.password);
+    if(this.type == 'add'){
+      this.close;
+    } else if (this.type == 'edit'){
+      this.close;
+    }
+  }
 }
