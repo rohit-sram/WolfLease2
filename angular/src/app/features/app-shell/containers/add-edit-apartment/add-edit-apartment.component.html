@@ -8,3 +8,13 @@
         <input type="text" [value]="address" (change)="onAddressChange($event)" placeholder="Enter Address Here..." id="apartment-address" />
         <br>
         <label>Facilities:</label>
+        <textarea [value]="facilities" (change)="onFacilitiesChange($event)" placeholder="Enter Facilities..." id="apartment-facilities"></textarea>
+        <br>
+        <label>Owner:</label>
+        <input [value]="ownerid" (change)="onOwnerChange($event)" type="text" id="apartment-owner"/>
+    </div>
+
+    <div class="modal-footer" footer>
+        <button class="btn" (click)="submit()">Done</button>
+    </div>
+</div>
