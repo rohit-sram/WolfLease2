@@ -1,0 +1,18 @@
+<div id="login-form">
+    <div id="login">
+        <form id="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <label>Username:   </label>
+            <input id="username" type="text" name="username" formControlName="username" />
+            <br>
+            <label>Password:   </label>
+            <input id="password" type="password" name="password" formControlName="password" />
+            <br>
+            <input type="submit" value="Sign In"/>
+            <br>
+            <br>
+            <a [routerLink]="['/register']">Register Here</a>
+            <br>
+            <span *ngIf="isError">{{message}}</span>
+        </form>
+    </div>
+</div>
