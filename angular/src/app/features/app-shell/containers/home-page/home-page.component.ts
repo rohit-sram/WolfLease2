@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SimpleModalComponent,SimpleModalService} from 'ngx-simple-modal';
 import { FeatureService } from '../../services/feature.service';
 import { ApartmentModalComponent } from '../apartment-modal/apartment-modal.component';
@@ -15,7 +16,8 @@ import { UserModalComponent } from '../user-modal/user-modal.component';
 export class HomePageComponent implements OnInit {
 
   constructor(private readonly featureService: FeatureService,
-              private readonly simpleModalService: SimpleModalService) { }
+              private readonly simpleModalService: SimpleModalService,
+              private readonly router: Router) { }
 
   ngOnInit(): void {
   }
@@ -36,5 +38,15 @@ export class HomePageComponent implements OnInit {
     }
   });
 
+  }
+
+  logout(){
+    this.featureService.logout()
+    .subscribe((resp: any) => {
+      if(resp.message){
+        localStorage.removeItem('token');
+        this.router.navigateByUrl('/login');
+      }
+    })
   }
 }
