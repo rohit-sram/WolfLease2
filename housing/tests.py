@@ -9,6 +9,8 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from housing.models import *
 import json
+from django.contrib.auth.models import User as UserAuth
+from rest_framework.authtoken.models import Token
 
 
 
@@ -16,6 +18,19 @@ class OwnerTests(APITestCase):
     """
         This is Owner test class.
     """
+
+    def setUp(self):
+        user = UserAuth.objects.create_user(
+            username='dd',
+            password='dd',
+            email='dd@eamil.com',
+            first_name='dd',
+            last_name='dd'
+        )
+        user.save()
+        token,_ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+
     def test_create_owner(self):
         """
         Ensure we can create a new Owner object.
@@ -85,6 +100,18 @@ class InterestedTests(APITestCase, TestCase):
         This is Interested test class.
     """
 
+    def setUp(self):
+        user = UserAuth.objects.create_user(
+            username='dd',
+            password='dd',
+            email='dd@eamil.com',
+            first_name='dd',
+            last_name='dd'
+        )
+        user.save()
+        token,_ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+
     @classmethod
     def setUpTestData(cls):
         """
@@ -149,6 +176,18 @@ class FlatTests(APITestCase, TestCase):
     """
         This is Flat test class.
     """
+
+    def setUp(self):
+        user = UserAuth.objects.create_user(
+            username='dd',
+            password='dd',
+            email='dd@eamil.com',
+            first_name='dd',
+            last_name='dd'
+        )
+        user.save()
+        token,_ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
 
     @classmethod
     def setUpTestData(cls):
@@ -225,6 +264,19 @@ class ApartmentTests(APITestCase, TestCase):
     """
         This is Apartment test class.
     """
+
+    def setUp(self):
+        user = UserAuth.objects.create_user(
+            username='dd',
+            password='dd',
+            email='dd@eamil.com',
+            first_name='dd',
+            last_name='dd'
+        )
+        user.save()
+        token,_ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+
     @classmethod
     def setUpTestData(cls):
         """
@@ -297,7 +349,6 @@ class ApartmentTests(APITestCase, TestCase):
         # need to test this out
         url = url + '?search=ClarionHeights'
         response = self.client.get(url)
-        print('Content: '+str(response.content))
         result = json.loads(response.content)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(result), 1)
@@ -308,6 +359,19 @@ class UserTests(APITestCase, TestCase):
     """
         This is User test class.
     """
+    def setUp(self):
+        user = UserAuth.objects.create_user(
+            username='dd',
+            password='dd',
+            email='dd@eamil.com',
+            first_name='dd',
+            last_name='dd'
+        )
+        user.save()
+        token,_ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+
+
     @classmethod
     def setUpTestData(cls):
         """
@@ -398,6 +462,17 @@ class LeaseTests(APITestCase, TestCase):
     """
         This is Lease test class.
     """
+    def setUp(self):
+        user = UserAuth.objects.create_user(
+            username='dd',
+            password='dd',
+            email='dd@eamil.com',
+            first_name='dd',
+            last_name='dd'
+        )
+        user.save()
+        token,_ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
 
     def test_create_lease(self):
         """
