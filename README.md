@@ -213,15 +213,7 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 <h2> Phase 1 </h2>
 
-[Subodh Gujar](https://github.com/subodh30)
-
-[Ameya Vaichalkar](https://github.com/ameyagv)
-
-[Rohan Shiveshwarkar](https://github.com/RoninS28)
-
-[Kunal Patil](https://github.com/kunalpatil1810)
-
-[Yash Sonar](https://github.com/Yash-567)
+[Subodh Gujar](https://github.com/subodh30) [Ameya Vaichalkar](https://github.com/ameyagv) [Rohan Shiveshwarkar](https://github.com/RoninS28) [Kunal Patil](https://github.com/kunalpatil1810) [Yash Sonar](https://github.com/Yash-567)
 
 <h2> Phase 2 </h2>
 
