@@ -83,11 +83,6 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" width="70" height="70"/> <img src = "./imgs/postman1.png" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="70" height="70"/> <img src = "./imgs/nginx.png" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" width="70" height="70"/>
 
-- **Language used:** Python
-- **Libraries used:** Django
-- **Libraries used:** Angular
-
-
 <h1>🛠  Installation Guide</h1>
 
   1. Install <a href="https://www.docker.com/">Docker</a> on your operating system.
