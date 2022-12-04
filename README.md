@@ -8,7 +8,7 @@
 
 <h2 align="center">
 
-  [Link to Deployed Application](http://152.7.177.31:8000/)
+  [Link to Deployed Application](http://152.7.177.43:8010/)
 
 </h2>
 
