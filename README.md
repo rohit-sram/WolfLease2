@@ -80,9 +80,9 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 
 
 # ⚙️ Built with
-  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="100" height="100"/>
-  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="100" height="100"/>
-  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="100" height="100"/>
+  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="60" height="60"/>
+  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="60" height="60"/>
+  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="60" height="60"/>
 
 - **Language used:** Python
 - **Libraries used:** Django
