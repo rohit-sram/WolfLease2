@@ -1,16 +1,16 @@
-<div id="login-form">
+<div id="login-form" class="center">
     <div id="login">
         <form id="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <label>Username:   </label>
-            <input id="username" type="text" name="username" formControlName="username" />
+            <label class="form-label">Username:   </label>
+            <input class="form-contol" id="username" type="text" name="username" formControlName="username" />
             <br>
-            <label>Password:   </label>
-            <input id="password" type="password" name="password" formControlName="password" />
+            <label class="form-label">Password:   </label>
+            <input id="password" class="form-control" type="password" name="password" formControlName="password" />
             <br>
-            <input type="submit" value="Sign In"/>
+            <input type="submit" class="btn" value="Sign In"/>
             <br>
             <br>
-            <a [routerLink]="['/register']">Register Here</a>
+            <button class="btn" [routerLink]="['/register']">Register Here</button>
             <br>
             <span *ngIf="isError">{{message}}</span>
         </form>
