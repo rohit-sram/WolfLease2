@@ -207,6 +207,12 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
    - Removal of Unnecessary Fields from Models
    - Added Validations
 
+<h1>❗ TroubleShooting and Help Guide</h1>
+
+ 1. For any issues faced while using the application, please email the detailed description and steps to reproduce the error at wolflease2@proton.me .
+ 2. If you are a developer, please raise an issue on github with steps to reproduce and possible source of error.
+ 3. Our email is monitored 24x7 and we usually respond within 1 hour. Happy Emailing :).
+
 <h1>🍰 Contributing</h1>
 
 Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/divyang02/WolfLease/pulls).
