@@ -6,15 +6,15 @@ import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
 
 @Component({
-    selector: 'cim-login',
+    selector: 'app-register',
     templateUrl: './register.component.html'
   })
   export class RegisterComponent implements OnDestroy {
     registerForm: FormGroup;
-  
+
     //to avoid memory leaks
     onDestroySubject: Subject<void> = new Subject<void>();
-  
+
     constructor(
       private readonly formBuilder: FormBuilder,
      private readonly loginService: LoginService,
@@ -34,13 +34,13 @@ import { LoginService } from '../../services/login.service';
         }
       );
     }
-  
+
     // todo: have to be discussed
     onSubmit(): void {
       if (this.registerForm.invalid && this.registerForm.value.password!=this.registerForm.value.password2) {
         return;
       }
-  
+
       const username = this.registerForm.value.username;
       const password = this.registerForm.value.password;
       const password2 = this.registerForm.value.password2;
@@ -60,9 +60,9 @@ import { LoginService } from '../../services/login.service';
         .subscribe((resp: any) => {
         this.router.navigateByUrl('/login');
       })
-      
+
     }
-  
+
     ngOnDestroy() {
       this.onDestroySubject.next();
     }
