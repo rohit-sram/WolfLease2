@@ -79,7 +79,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 
 
 
-# Built with
+# ⚙️ Built with
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="100" height="100"/>
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="100" height="100"/>
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="100" height="100"/>
@@ -89,7 +89,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 - **Libraries used:** Angular
 
 
-# Getting started:
+# 🥇 Getting started:
 
   - ### Prerequisite:
       - Download [Python3.8](https://www.python.org/downloads/) on your system.
