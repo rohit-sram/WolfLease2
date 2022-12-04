@@ -53,7 +53,7 @@ export class FeatureService {
   }
 
   logout(){
-    return this.httpClient.get<any>('http://localhost:8000/logout',{
+    return this.httpClient.get<any>(appShellEndpoints.logout,{
       headers: {
         Authorization: 'Token '+localStorage.getItem('token')
       }
