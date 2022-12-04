@@ -62,7 +62,7 @@
     <a href="https://github.com/divyang02/WolfLease/issues/new/choose">Request Feature</a>
 </p>
 
-## Description
+# 📄 Description
 
 <div align="center">
 
@@ -122,7 +122,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
        `http://127.0.0.1:8000/`
 
 
-## WolfLease Endpoints
+# 🔑 WolfLease Endpoints
 #### Admin page
 
 |HTTP Method|URL|Description|
@@ -200,7 +200,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 |`GET`|http://localhost:8000/users?search={email} | Search for an User with given email |
 |`GET`|http://localhost:8000/users?search={contact_number} | Search for a User with given contact number |
 
-## Roadmap
+# 🚗 Roadmap
    - [List of Roadmap features](https://github.com/subodh30/WolfLease/issues/59)
 
 <h1>🍰 Contributing</h1>
