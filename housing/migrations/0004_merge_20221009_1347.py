@@ -17,5 +17,4 @@ class Migration(migrations.Migration):
         ('housing', '0003_alter_interested_flat_id'),
     ]
 
-    operations = [
-    ]
+    operations = []

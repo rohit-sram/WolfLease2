@@ -4,26 +4,25 @@
 
 from rest_framework import serializers
 from housing import models
-from rest_framework.authtoken.models import Token 
+from rest_framework.authtoken.models import Token
 from rest_framework.validators import ValidationError
 from django.contrib.auth.hashers import make_password
-
-
 
 
 class UserSerializer(serializers.ModelSerializer):
     """
         This is UserSerializer for User model.
     """
+
     class Meta:
         """
             This class contains fields to be serialized.
         """
-        model = models.User 
+        model = models.User
         '''User model '''
         fields = '__all__'
         '''User field '''
-    
+
     def create(self, validated_data):
         """
             This is create method to create the user using password.
@@ -32,10 +31,12 @@ class UserSerializer(serializers.ModelSerializer):
         '''Password validation'''
         return super(UserSerializer, self).create(validated_data)
 
+
 class FlatSerializer(serializers.ModelSerializer):
     """
         This is FlatSerializer for Flat model.
     """
+
     class Meta:
         """
             This class contains fields to be serialized.
@@ -45,10 +46,12 @@ class FlatSerializer(serializers.ModelSerializer):
         fields = '__all__'
         '''Flat fields'''
 
+
 class OwnerSerializer(serializers.ModelSerializer):
     """
         This is OwnerSerializer for Owner model.
     """
+
     class Meta:
         """
             This class contains fields to be serialized.
@@ -58,10 +61,12 @@ class OwnerSerializer(serializers.ModelSerializer):
         fields = '__all__'
         '''Owner fields'''
 
+
 class InterestedSerializer(serializers.ModelSerializer):
     """
         This is InterestedSerializer for Interested model.
     """
+
     class Meta:
         """
             This class contains fields to be serialized.
@@ -76,6 +81,7 @@ class LeaseSerializer(serializers.ModelSerializer):
     """
         This is LeaseSerializer for Lease model.
     """
+
     class Meta:
         """
             This class contains fields to be serialized.
@@ -85,10 +91,12 @@ class LeaseSerializer(serializers.ModelSerializer):
         fields = '__all__'
         '''Lease fields'''
 
+
 class ApartmentSerializer(serializers.ModelSerializer):
     """
         This is ApartmentSerializer for Apartment model.
     """
+
     class Meta:
         """
             This class contains fields to be serialized.

@@ -10,14 +10,13 @@ from django.db import models
 import uuid
 
 
-
 class Owner(models.Model):
     """
     This is a Owner database structure.
     """
     contact_number = models.CharField(max_length=12)
-    '''Contact number of Owner''' 
-    contact_email = models.EmailField(unique=True ,max_length=30)
+    '''Contact number of Owner'''
+    contact_email = models.EmailField(unique=True, max_length=30)
     '''Contact email of Owner'''
     password = models.CharField(max_length=50)
     '''Password of Owner'''
@@ -33,10 +32,12 @@ class Apartment(models.Model):
     '''Facilities of Apartment'''
     owner_id = models.ForeignKey(to=Owner, on_delete=models.DO_NOTHING)
     '''Owner ID of respective Apartment'''
-    owner_id = models.ForeignKey(to=Owner, null=True,on_delete=models.SET_NULL)
+    owner_id = models.ForeignKey(to=Owner,
+                                 null=True,
+                                 on_delete=models.SET_NULL)
+
 
 class Lease(models.Model):
-
     """
     This is Lease database structure.
     """
@@ -45,28 +46,34 @@ class Lease(models.Model):
     lease_end_date = models.DateField()
     '''End of lease date'''
 
+
 class Flat(models.Model):
     """
     This is Flat database structure.
     """
     availability = models.BooleanField(default=False)
     '''Availibility of Flat'''
-    associated_apt_id = models.ForeignKey(to=Apartment, on_delete=models.DO_NOTHING)
+    associated_apt_id = models.ForeignKey(to=Apartment,
+                                          on_delete=models.DO_NOTHING)
     '''Associated ID of respective Flat'''
     lease_id = models.ForeignKey(to=Lease, on_delete=models.DO_NOTHING)
     '''Lease ID of respective Flat'''
-    associated_apt_id = models.ForeignKey(to=Apartment, on_delete=models.CASCADE)
-    lease_id = models.ForeignKey(to=Lease, null=True, on_delete=models.SET_NULL)
+    associated_apt_id = models.ForeignKey(to=Apartment,
+                                          on_delete=models.CASCADE)
+    lease_id = models.ForeignKey(to=Lease,
+                                 null=True,
+                                 on_delete=models.SET_NULL)
     rent_per_room = models.IntegerField()
     '''Rent per room of Flat'''
     floor_number = models.IntegerField()
     '''Floor number of Flat'''
 
+
 class User(models.Model):
     """
     This is User database structure.
     """
-    flat_id = models.ForeignKey(to=Flat,null=True, on_delete=models.SET_NULL)
+    flat_id = models.ForeignKey(to=Flat, null=True, on_delete=models.SET_NULL)
     '''Flat ID of User'''
     contact_number = models.CharField(max_length=12)
     '''Contact number of User'''
@@ -92,6 +99,7 @@ class User(models.Model):
         This is used for login using email.
         """
         return self.contact_email
+
 
 class Interested(models.Model):
     """

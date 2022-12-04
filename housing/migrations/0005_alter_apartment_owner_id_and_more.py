@@ -14,21 +14,32 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='apartment',
             name='owner_id',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='housing.owner'),
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to='housing.owner'),
         ),
         migrations.AlterField(
             model_name='flat',
             name='associated_apt_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='housing.apartment'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                to='housing.apartment'),
         ),
         migrations.AlterField(
             model_name='flat',
             name='lease_id',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='housing.lease'),
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to='housing.lease'),
         ),
         migrations.AlterField(
             model_name='owner',
             name='id',
-            field=models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID'),
+            field=models.BigAutoField(auto_created=True,
+                                      primary_key=True,
+                                      serialize=False,
+                                      verbose_name='ID'),
         ),
     ]

@@ -15,14 +15,17 @@ class Migration(migrations.Migration):
     """
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
             name='Apartment',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('id',
+                 models.UUIDField(default=uuid.uuid4,
+                                  editable=False,
+                                  primary_key=True,
+                                  serialize=False)),
                 ('address', models.CharField(max_length=256)),
                 ('facilities', models.CharField(max_length=512)),
             ],
@@ -30,17 +33,28 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Flat',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('id',
+                 models.UUIDField(default=uuid.uuid4,
+                                  editable=False,
+                                  primary_key=True,
+                                  serialize=False)),
                 ('availability', models.BooleanField(default=False)),
                 ('rent_per_room', models.IntegerField()),
                 ('floor_number', models.IntegerField()),
-                ('associated_apt_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.apartment')),
+                ('associated_apt_id',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.DO_NOTHING,
+                     to='housing.apartment')),
             ],
         ),
         migrations.CreateModel(
             name='Lease',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('id',
+                 models.UUIDField(default=uuid.uuid4,
+                                  editable=False,
+                                  primary_key=True,
+                                  serialize=False)),
                 ('lease_start_date', models.DateField()),
                 ('lease_end_date', models.DateField()),
             ],
@@ -48,7 +62,11 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Owner',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('id',
+                 models.UUIDField(default=uuid.uuid4,
+                                  editable=False,
+                                  primary_key=True,
+                                  serialize=False)),
                 ('contact_number', models.CharField(max_length=12)),
                 ('contact_email', models.EmailField(max_length=30)),
                 ('password', models.CharField(max_length=50)),
@@ -57,36 +75,61 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='User',
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+                ('id',
+                 models.UUIDField(default=uuid.uuid4,
+                                  editable=False,
+                                  primary_key=True,
+                                  serialize=False)),
                 ('contact_number', models.CharField(max_length=12)),
                 ('contact_email', models.EmailField(max_length=30)),
                 ('password', models.CharField(max_length=50)),
-                ('user_type', models.CharField(default='Guest', max_length=20)),
+                ('user_type', models.CharField(default='Guest',
+                                               max_length=20)),
                 ('dob', models.DateField()),
                 ('gender', models.CharField(default='M', max_length=2)),
                 ('pref_smoking', models.CharField(default='N', max_length=2)),
                 ('pref_drinking', models.CharField(default='N', max_length=2)),
                 ('pref_veg', models.CharField(default='N', max_length=2)),
-                ('flat_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.flat')),
+                ('flat_id',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.DO_NOTHING,
+                     to='housing.flat')),
             ],
         ),
         migrations.CreateModel(
             name='Interested',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('apartment_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.apartment')),
-                ('flat_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.flat')),
-                ('user_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.user')),
+                ('id',
+                 models.BigAutoField(auto_created=True,
+                                     primary_key=True,
+                                     serialize=False,
+                                     verbose_name='ID')),
+                ('apartment_id',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.DO_NOTHING,
+                     to='housing.apartment')),
+                ('flat_id',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.DO_NOTHING,
+                     to='housing.flat')),
+                ('user_id',
+                 models.ForeignKey(
+                     on_delete=django.db.models.deletion.DO_NOTHING,
+                     to='housing.user')),
             ],
         ),
         migrations.AddField(
             model_name='flat',
             name='lease_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.lease'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.DO_NOTHING,
+                to='housing.lease'),
         ),
         migrations.AddField(
             model_name='apartment',
             name='owner_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='housing.owner'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.DO_NOTHING,
+                to='housing.owner'),
         ),
     ]

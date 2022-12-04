@@ -30,6 +30,9 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='user',
             name='flat_id',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='housing.flat'),
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to='housing.flat'),
         ),
     ]

@@ -14,13 +14,16 @@ class Migration(migrations.Migration):
     """
 
     dependencies = [
-        ('housing', '0002_alter_owner_contact_email_alter_user_contact_email_and_more'),
+        ('housing',
+         '0002_alter_owner_contact_email_alter_user_contact_email_and_more'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='interested',
             name='flat_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='housing.flat'),
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                to='housing.flat'),
         ),
     ]
