@@ -205,6 +205,8 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
    - Docker Integration
    - FrontEnd and BackEnd Connection with Usable Deployment
    - Authentication
+   - Removal of Unnecessary Fields from Models
+   - Added Validations
 
 <h1>🍰 Contributing</h1>
 
