@@ -26,6 +26,10 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         """
             This is create method to create the user using password.
+            Arguments:
+                validated_data {[type]} -- [description]
+            Returns:
+                [type] -- [description]
         """
         validated_data['password'] = make_password(validated_data['password'])
         '''Password validation'''

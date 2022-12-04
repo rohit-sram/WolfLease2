@@ -19,6 +19,9 @@ class OwnerTests(APITestCase):
     """
 
     def setUp(self):
+        """
+        This is a setup function for Owner test class.
+        """
         user = UserAuth.objects.create_user(username='dd',
                                             password='dd',
                                             email='dd@eamil.com',
