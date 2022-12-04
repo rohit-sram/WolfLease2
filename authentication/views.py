@@ -7,14 +7,27 @@ from django.contrib.auth import login
 
 
 class RegisterView(generics.CreateAPIView):
+    """
+    Register a new user.
+    """
     permission_classes = (permissions.AllowAny, )
     serializer_class = RegisterSerializer
 
 
 class LoginView(views.APIView):
+    """
+    Login a user.
+    """
     permission_classes = (permissions.AllowAny, )
 
     def post(self, request):
+        """
+        Login a user.
+        Arguments:
+            request {[type]} -- [description]
+        Returns:
+            [type] -- [description]
+        """
         serializer = LoginSerializer(data=self.request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
@@ -28,8 +41,18 @@ class LoginView(views.APIView):
 
 
 class LogoutView(views.APIView):
+    """
+    Logout a user.
+    """
 
     def get(self, request):
+        """
+        Logout a user.
+        Arguments:
+            request {[type]} -- [description]
+        Returns:
+            [type] -- [description]
+        """
         request.user.auth_token.delete()
         content = {'message': 'Logout successfull'}
         return Response(content)
