@@ -1,6 +1,6 @@
 # WolfLease
 
-[![codecov](https://codecov.io/gh/divyang02/MailerOwl/branch/main/graph/badge.svg?token=O8AVQ0MZLR)](https://codecov.io/gh/divyang02/MailerOwl)
+[![codecov](https://codecov.io/gh/divyang02/WolfLease/branch/master/graph/badge.svg?token=66DVCQ0T01)](https://codecov.io/gh/divyang02/WolfLease)
 
 <a href="https://github.com/divyang02/WolfLease/actions">![GitHub Workflow Status](https://img.shields.io/github/workflow/status/divyang02/WolfLease/Django%20CI)</a>&nbsp;&nbsp; <a href="https://opensource.org/licenses/MIT">![GitHub](https://img.shields.io/github/license/divyang02/WolfLease)</a>&nbsp;&nbsp; ![GitHub top language](https://img.shields.io/github/languages/top/divyang02/WolfLease)&nbsp;&nbsp; <a href="https://github.com/divyang02/WolfLease/issues">![GitHub issues](https://img.shields.io/github/issues/divyang02/WolfLease)</a>&nbsp;&nbsp; <a href="https://github.com/divyang02/WolfLease/issues?q=is%3Aissue+is%3Aclosed">![GitHub closed issues](https://img.shields.io/github/issues-closed/divyang02/WolfLease)</a>&nbsp;&nbsp; [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7178274.svg)](https://doi.org/10.5281/zenodo.7178274)&nbsp;&nbsp;
 ## Description
