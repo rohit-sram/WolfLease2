@@ -79,7 +79,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 
 
 
-- ## Built with
+# Built with
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="100" height="100"/>
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="100" height="100"/>
   <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="100" height="100"/>
@@ -89,7 +89,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 - **Libraries used:** Angular
 
 
-## Getting started:
+# Getting started:
 
   - ### Prerequisite:
       - Download [Python3.8](https://www.python.org/downloads/) on your system.
@@ -200,8 +200,11 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 |`GET`|http://localhost:8000/users?search={email} | Search for an User with given email |
 |`GET`|http://localhost:8000/users?search={contact_number} | Search for a User with given contact number |
 
-# 🚗 Roadmap
-   - [List of Roadmap features](https://github.com/subodh30/WolfLease/issues/59)
+# 🚗 New Features Added
+   - [FrontEnd Implementation](https://github.com/divyang02/WolfLease/tree/master/angular#readme)
+   - Docker Integration
+   - FrontEnd and BackEnd Connection with Usable Deployment
+   - Authentication
 
 <h1>🍰 Contributing</h1>
 
