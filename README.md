@@ -173,7 +173,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 |`GET`|http://localhost:8000/users?search={email} | Search for an User with given email |
 |`GET`|http://localhost:8000/users?search={contact_number} | Search for a User with given contact number |
 
-# 🚗 New Features Added
+# 🚗 New Features Added [...](https://github.com/divyang02/WolfLease/discussions/35)
    - [FrontEnd Implementation](https://github.com/divyang02/WolfLease/tree/master/angular#readme)
    - Docker Integration
    - FrontEnd and BackEnd Connection with Usable Deployment
