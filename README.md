@@ -88,38 +88,17 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 - **Libraries used:** Angular
 
 
-# 🥇 Getting started:
+<h1>🛠  Installation Guide</h1>
 
-  - ### Prerequisite:
-      - Download [Python3.8](https://www.python.org/downloads/) on your system.
-
-  - ### Run Instructions
-
-     **To run the site locally:**
-
-     - Clone [this (Wolflease) github repo](https://github.com/subodh30/WolfLease).
-
-     - Navigate to project directory.
-
-     - Create a virtual environment:
-
-        `python -m venv project_env`
-    
-     - Activate the virtual environment: 
-
-        `source project_env/bin/activate`
-    
-     - Build the virtual environment:
-
-        `pip install -r requirements.txt`        
-  
-     - Run:
-     
-        `python manage.py runserver`
-
-     - Site will be hosted at:
-       `http://127.0.0.1:8000/`
-
+  1. Install <a href="https://www.docker.com/">Docker</a> on your operating system.
+  2. Clone the github repository at a preferable location in your system.
+  ```
+  git clone https://github.com/divyang02/WolfLease.git
+  cd WolfLease
+  ```
+  3. Run ```docker compose up``` in a new terminal.
+  4. Open your browser and go to localhost:8010.
+  5. Login with your login credentials and enjoy the application.
 
 # 🔑 WolfLease Endpoints
 #### Admin page
