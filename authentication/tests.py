@@ -1,5 +1,4 @@
 from django.test import TestCase
-
 """
 Authentication tests
 """

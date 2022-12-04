@@ -1,6 +1,5 @@
 from django.urls import path
 from authentication.views import RegisterView, LoginView, LogoutView
-
 """
 Authentication urls
 """
