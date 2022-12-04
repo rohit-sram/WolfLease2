@@ -38,7 +38,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        token: "c640c7b0-44f1-4c81-823a-ddfdc89ff703"
+        token: "1809182b-a8a7-4d59-b121-5b37f163aaa4"
         directory: ./htmlcov/
         env_vars: OS,PYTHON
         fail_ci_if_error: true

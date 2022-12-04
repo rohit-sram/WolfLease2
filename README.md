@@ -23,6 +23,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 
 - **Language used:** Python
 - **Libraries used:** Django
+- **Libraries used:** Angular
 
 
 ## Getting started:
