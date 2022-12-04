@@ -126,3 +126,10 @@
     padding: 10px;
     left: 50%;
   }
+
+  label {
+    display: inline-block;
+    width: 130px;
+    text-align: left;
+    padding-right: 5px;
+  }
