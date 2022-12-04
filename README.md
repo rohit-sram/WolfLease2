@@ -73,11 +73,17 @@
 
 Finding apartments on a lease can be a difficult and time-consuming task. We can sublease a room to save time, possibly rent, and enjoy the benefits of a shorter lease time. WolfLease is an application to help people find Apartments offering rooms on sublease and move in faster! WolfLease allows us to search for flats based on location, facilities, sublease start and end dates, etc.
 
-
-
 https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-bd49-f906de124589.mp4
 
+# The Flaws
+The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via docker container...etc
 
+With WolfJobs 2.0 we solved all the problems with these improvements
+
+- We added the authentication feature and make the user able to login and authenticate their profile
+- We added the frontend scripted through angularjs and nginx and connected the frontend and backend with a usable deployment
+- We also contained the application in a docker container and made the application dockerize to scaleup
+- We also added a multiple validations to the application and removed the Unnecessary Fields from Models
 
 # ⚙️ Built with
 
