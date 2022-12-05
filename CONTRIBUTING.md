@@ -5,7 +5,7 @@ Thank you for taking the time to contribute!
 The following is a set of guidelines for contributing. Please feel free to propose any changes to this project in a pull request.
 
 ## Code of Conduct
-This project and everyone participating is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [ameyav1234@gmail.com](mailto:ameyav1234@gmail.com).
+This project and everyone participating is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [gargpriyam21@gmail.com](mailto:gargpriyam21@gmail.com).
 
 ## Styleguides
 
