@@ -1,3 +1,8 @@
+"""
+    This is the application starting point where you can register different modules.
+"""
+
+
 from django.apps import AppConfig
 
 

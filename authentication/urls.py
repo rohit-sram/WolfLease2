@@ -1,3 +1,7 @@
+"""
+    This is url file to add urls for respective models.
+"""
+
 from django.urls import path
 from authentication.views import RegisterView, LoginView, LogoutView
 """

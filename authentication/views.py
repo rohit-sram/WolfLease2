@@ -1,3 +1,7 @@
+"""
+    This is a file to add views for models.
+"""
+
 from .serializers import RegisterSerializer, LoginSerializer
 from rest_framework import generics
 from rest_framework.authtoken.models import Token
@@ -24,9 +28,9 @@ class LoginView(views.APIView):
         """
         Login a user.
         Arguments:
-            request {[type]} -- [description]
+        request {[type]} -- [description]
         Returns:
-            [type] -- [description]
+        [type] -- [description]
         """
         serializer = LoginSerializer(data=self.request.data)
         serializer.is_valid(raise_exception=True)
@@ -49,9 +53,9 @@ class LogoutView(views.APIView):
         """
         Logout a user.
         Arguments:
-            request {[type]} -- [description]
+        request {[type]} -- [description]
         Returns:
-            [type] -- [description]
+        [type] -- [description]
         """
         request.user.auth_token.delete()
         content = {'message': 'Logout successfull'}

@@ -1,5 +1,5 @@
+"""
+    This is a file to add test cases for different models.
+"""
 from django.test import TestCase
-"""
-Authentication tests
-"""
 # Create your tests here.

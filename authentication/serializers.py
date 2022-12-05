@@ -1,3 +1,7 @@
+"""
+    This is a serializer file to add different serializers for the database.
+"""
+
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework.validators import UniqueValidator
@@ -39,11 +43,11 @@ class RegisterSerializer(serializers.ModelSerializer):
         """
         Validate password and password2 fields match.
         Arguments:
-            validated_data {[type]} -- [description]
+        validated_data {[type]} -- [description]
         Raises:
-            serializers.ValidationError -- [description]
+        serializers.ValidationError -- [description]
         Returns:
-            [type] -- [description]
+        [type] -- [description]
         """
         if validated_data['password'] != validated_data['password2']:
             raise serializers.ValidationError(
@@ -55,9 +59,9 @@ class RegisterSerializer(serializers.ModelSerializer):
         """
         Create a new user with encrypted password and return it.
         Arguments:
-            validated_data {[type]} -- [description]
+        validated_data {[type]} -- [description]
         Returns:
-            [type] -- [description]
+        [type] -- [description]
         """
         user = User.objects.create(username=validated_data['username'],
                                    email=validated_data['email'],
@@ -88,11 +92,11 @@ class LoginSerializer(serializers.Serializer):
         """
         Validate username and password fields match.
         Arguments:
-            validated_data {[type]} -- [description]
+        validated_data {[type]} -- [description]
         Raises:
-            serializers.ValidationError -- [description]
+        serializers.ValidationError -- [description]
         Returns:
-            [type] -- [description]
+        [type] -- [description]
         """
         user = authenticate(username=validated_data['username'],
                             password=validated_data['password'])
