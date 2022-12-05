@@ -78,7 +78,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 # ❌ Improvements
 The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via docker container...etc
 
-With WolfJobs 2.0 we solved all the problems with these improvements
+With WolfLease 2.0 we solved all the problems with these improvements
 
 - We added the authentication feature and make the user able to login and authenticate their profile
 - We added the frontend scripted through angularjs and nginx and connected the frontend and backend with a usable deployment
@@ -99,7 +99,8 @@ With WolfJobs 2.0 we solved all the problems with these improvements
   ```
   3. Run ```docker compose up``` in a new terminal.
   4. Open your browser and go to localhost:8010.
-  5. Login with your login credentials and enjoy the application.
+  5. Register an User.
+  6. Login with your login credentials and enjoy the application.
 
 # 🔑 WolfLease Endpoints
 #### Admin page
