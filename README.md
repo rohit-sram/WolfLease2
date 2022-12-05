@@ -77,6 +77,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 
 # 📄 Rubric
 
+- Phase 1 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/ProjectRubric/Project1Rubric.md)
 - Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md)
 
 # ❌ Improvements
