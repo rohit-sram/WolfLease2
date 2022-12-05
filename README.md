@@ -75,6 +75,10 @@ Finding apartments on a lease can be a difficult and time-consuming task. We can
 
 https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-bd49-f906de124589.mp4
 
+# 📄 Rubric
+
+- Phase 2 Rubric: [link]("./docs/Phase2ProjectRubric/Project2Rubric.md")
+
 # ❌ Improvements
 The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via docker container...etc
 
