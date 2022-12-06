@@ -7,7 +7,7 @@ authors:
 - family-names: "Doshi"
   given-names: "Divyang"
   
-- family-names: "Potlurri"
+- family-names: "Potluri"
   given-names: "Manogna"
   
 - family-names: "Garg"
@@ -17,6 +17,6 @@ authors:
   given-names: "Yash"
 title: "WolfLease"
 version: 1.0.0
-doi: 10.5281/zenodo.1234
+doi: 10.5281/zenodo.7402459
 date-released: 2022-12-05
 url: "https://github.com/divyang02/WolfLease"
