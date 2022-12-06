@@ -79,12 +79,12 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 ## Phase 2
 [![WolfLease2.0](./imgs/WolfLease.png)](https://drive.google.com/file/d/1wke2At9bs9NQ2qyV2rcWIWxFngpunB3k/view?usp=sharing)
 
-# 📄 Rubric
+# 📋 Rubric
 
 - Phase 1 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/ProjectRubric/Project1Rubric.md)
 - Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md)
 
-# ❌ Improvements
+# 🚀 Improvements
 The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via docker container...etc
 
 With WolfLease 2.0 we solved all the problems with these improvements
@@ -96,7 +96,7 @@ With WolfLease 2.0 we solved all the problems with these improvements
 
 # ⚙️ Built with
 
-  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" width="70" height="70"/> <img src = "./imgs/postman1.png" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="70" height="70"/> <img src = "./imgs/nginx.png" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" width="70" height="70"/>
+  <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" width="70" height="70"/><img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain-wordmark.svg" width="70" height="70"/> <img src = "./imgs/nginx.svg" width="70" height="70"/> <img src = "./imgs/postman1.png" width="70" height="70"/><img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" width="70" height="70"/> <img src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="70" height="70"/> 
 
 <h1>🛠  Installation Guide</h1>
 
@@ -108,7 +108,7 @@ With WolfLease 2.0 we solved all the problems with these improvements
   ```
   3. Run ```docker compose up``` in a new terminal.
   4. Open your browser and go to localhost:8010.
-  5. Register an User, Or login with admin credentials (username - admin, password - admin)
+  5. Register a User
   6. Login with your login credentials and enjoy the application.
 
 # 🔑 WolfLease Endpoints
