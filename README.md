@@ -108,7 +108,7 @@ With WolfLease 2.0 we solved all the problems with these improvements
   ```
   3. Run ```docker compose up``` in a new terminal.
   4. Open your browser and go to localhost:8010.
-  5. Register an User.
+  5. Register an User, Or login with admin credentials (username - admin, password - admin)
   6. Login with your login credentials and enjoy the application.
 
 # 🔑 WolfLease Endpoints
