@@ -1,16 +1,33 @@
-import { JsonPipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { HomeComponent } from './home/home.component';
-import { UserLoginGuard } from '../guard/user-login.guard';
+import { OwnersComponent } from './owners/owners.component';
+import { UsersComponent } from './users/users.component';
+import { LeaseComponent } from './lease/lease.component';
+import { FlatsComponent } from './flats/flats.component';
+import { ApartmentsComponent } from './apartments/apartments.component';
 const routes: Routes = [
   {path:"",component :MainComponent, children:[
     {
-      path: 'home',
-      component: HomeComponent,
-      canActivate: [UserLoginGuard]
-    }
+      path: 'owners',
+      component: OwnersComponent,
+    },
+    {
+      path: 'users',
+      component: UsersComponent,
+    },
+    {
+      path: 'lease',
+      component: LeaseComponent,
+    },
+    {
+      path: 'flats',
+      component: FlatsComponent,
+    },
+    {
+      path: 'apartments',
+      component: ApartmentsComponent,
+    },
   ]}
 ];
 
