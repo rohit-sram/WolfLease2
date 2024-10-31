@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import axios from 'axios';
+import { UserInterfaceBehaviour } from '../../interface/userInterfaceBehaviour/user-interface-behaviour';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OwnerService {
 
-  constructor() { }
+  constructor(private userInterfaceBehaviour: UserInterfaceBehaviour) { }
 
   async getOwners() {
     try {
@@ -15,7 +16,7 @@ export class OwnerService {
         url: environment.url + 'owners',
         method: 'GET',
         headers: {
-          'Authorization': 'Token ec32c81fb42148ad70e8ed3bd7f3de4a16819e10'
+          'Authorization': 'Token ' + this.userInterfaceBehaviour.getToken()
         }
       })
       return response.data;
@@ -31,7 +32,7 @@ export class OwnerService {
         url: environment.url + 'owners',
         method: 'POST',
         headers: {
-          'Authorization': 'Token ec32c81fb42148ad70e8ed3bd7f3de4a16819e10'
+          'Authorization': 'Token ' + this.userInterfaceBehaviour.getToken()
         },
         data: data
       })
@@ -48,7 +49,7 @@ export class OwnerService {
         url: environment.url + 'owners/'+data.id,
         method: 'PUT',
         headers: {
-          'Authorization': 'Token ec32c81fb42148ad70e8ed3bd7f3de4a16819e10'
+          'Authorization': 'Token ' + this.userInterfaceBehaviour.getToken()
         },
         data: data
       })
@@ -64,7 +65,7 @@ export class OwnerService {
         url: environment.url + 'owners/' + data.id,
         method: 'DELETE',
         headers: {
-          'Authorization': 'Token ec32c81fb42148ad70e8ed3bd7f3de4a16819e10'
+          'Authorization': 'Token ' + this.userInterfaceBehaviour.getToken()
         },
         data: data
       })
