@@ -69,6 +69,17 @@ class Flat(models.Model):
     '''Floor number of Flat'''
 
 
+class UserPreference(models.Model):
+    """
+    This model represents the dietary preferences for a User.
+    """
+    preference_type = models.CharField(max_length=20, unique=True)
+    '''Dietary preference of the user (e.g., "veg", "non-veg", etc.)'''
+
+    def __str__(self):
+        return self.preference_type
+    
+
 class User(models.Model):
     """
     This is User database structure.
@@ -93,6 +104,8 @@ class User(models.Model):
     '''Drinking preference of User'''
     pref_veg = models.CharField(default="N", max_length=2)
     '''Vegetarian preference of User'''
+    user_preferences = models.ManyToManyField(UserPreference, blank=True)
+    '''Dietary preferences of the user'''
 
     def __str__(self):
         """
