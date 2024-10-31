@@ -12,23 +12,15 @@ import { SessionLoginService } from '../../../app/service/sessionLogin/session-l
 })
 export class SideMenuComponent {
   name : string
-  isVisible:boolean
   constructor(private spinner: NgxSpinnerService,private userInterace : UserInterfaceBehaviour,private router: Router, private userService : SessionLoginService,private toast : ToastrService) {
-    this.name = this.userInterace.getUser()['fname'] + " " + this.userInterace.getUser()['lname']
-    this.isVisible = this.userInterace.getUser()['authlvl'] > 200 ? true : false;
+    this.name = this.userInterace.getUser()['first_name'] + " " + this.userInterace.getUser()['last_name']
   }
   ngOnInit(): void {
   }
   async logout() {
     this.spinner.show();
     try {
-      await this.userService.logout(this.userInterace.getUser()['ztoken'])
-      this.spinner.hide()
-      this.toast.success('Logout Successfully', 'Thanks for coming', {
-        timeOut: 3000,
-      })
-      this.router.navigateByUrl('/')
-
+      await this.userService.logout(this.userInterace.getUser()['token'])
     } catch (err) {
       console.log( err )
     } finally {

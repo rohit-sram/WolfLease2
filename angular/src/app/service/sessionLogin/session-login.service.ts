@@ -1,32 +1,69 @@
 import { Injectable } from '@angular/core';
-import axios  from 'axios'
+import axios from 'axios'
 import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class SessionLoginService {
 
-  constructor() {  }
+  constructor() { }
 
-  async loginUser(uid: any, pwd: any): Promise<any> {
-    const config = {
-      url: environment.url + "authuser?uid=" + uid + "&pwd=" + pwd,
-      method: 'get'
+  async loginUser(data: any): Promise<any> {
+    try {
+      const response = await axios({
+        url: environment.url + 'login/',
+        method: 'POST',
+        data: data
+      })
+      return response.data;
     }
-    return await axios(config)
+    catch (error) {
+      throw error;
+    }
   }
-  async logout(ztoken: any): Promise<any> {
-    const config = {
-      url: environment.url + "authuser?ztoken=" + ztoken,
-      method: 'delete'
+
+  async registerUser(data: any) {
+    try {
+      const response = await axios({
+        url: environment.url + 'register/',
+        method: 'POST',
+        data: data
+      })
+      return response.data;
     }
-    return await axios(config)
+    catch (error) {
+      throw error;
+    }
   }
-  async sessionStatusAPICall(ztoken: any): Promise<any> {
-    const config = {
-      url: environment.url + "authuser?ztoken=" + ztoken,
-      method: 'get'
+  async logout(token: any): Promise<any> {
+    try { 
+      const response = await axios({
+        url: environment.url + "logout/",
+        method: 'get',
+        headers: {
+          'Authorization': 'Token ' + token
+        }
+      })
+      return response.data;
     }
-    return await axios(config)
+    catch (error) {
+      throw error;
+    }
+    
+  }
+  async getUser(token: any): Promise<any> {
+    try {
+      const response = await axios({
+        url: environment.url + "get-user/",
+        method: 'GET',
+        headers: {
+          'Authorization': 'Token ' + token
+        }
+      })
+      return response.data;
+    }
+    catch (error) {
+      throw error;
+    }
   }
 }

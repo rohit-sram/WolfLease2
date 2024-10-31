@@ -1,10 +1,7 @@
 export interface UserInterface {
-  ztoken?: string,
-  uid?: string,
-  lname?: string,
-  fname?: string,
-  authlvl?: Number,
-  subscriber?: string,
-  recordid?: string,
-  subscriberid?:string
+    token: string;
+    username: string;
+    email: string;
+    first_name: string;
+    last_name: string;
 }
