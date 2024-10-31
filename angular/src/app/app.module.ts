@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.modules';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { LoginModule } from './login/login.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
