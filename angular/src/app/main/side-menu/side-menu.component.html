@@ -1,0 +1,28 @@
+<div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+  <a routerLink="../home" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <img src="/img/logo.png" alt="logo" width="50" height="50" class="rounded-circle"> &nbsp; <span class="fs-5 d-none d-sm-inline"><b>Wolf</b>lease</span>
+  </a>
+  <ul class="nav flex-column  mb-0 mb-lg-auto align-items-center align-items-sm-start" width="100%" id="menu">
+    <li class="nav-item" routerLinkActive="underLineProperty">
+      <a routerLink="home" class="nav-link align-middle px-0">
+        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home Page</span>
+      </a>
+    </li>
+   
+  </ul>
+  <hr>
+  <div class="dropdown pb-4">
+    <a style="cursor: pointer;" class="d-flex  align-items-center text-white text-decoration-none dropdown-toggle"
+      id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="/img/img_avatar.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+      <span class="d-none d-sm-inline mx-1">{{name}}</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+      <li><a (click)="logout()" style="cursor:pointer" class="dropdown-item">Sign out</a></li>
+    </ul>
+  </div>
+</div>
+
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
