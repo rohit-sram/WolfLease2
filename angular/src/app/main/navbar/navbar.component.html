@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: left 24px;">
+  <button class="navbar-toggler"
+  type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+  aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"
+  (click)="toggleCollapsed()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div [ngClass]="{'collapse': collapsed, 'navbar-collapse': true, 'float-right':true}" id="navbarTogglerDemo01" style="float: right;">
+    <a class="navbar-brand" style="cursor: not-allowed">MotelPro</a>
+    <ul class="navbar-nav ms-auto mt-5 mt-lg-2" >
+      <!-- style="margin-right: 100px;" -->
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center"
+              id="navbarDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <img src="https://i.pinimg.com/originals/61/f7/5e/61f75ea9a680def2ed1c6929fe75aeee.jpg" class="rounded-circle"
+              height="30" alt="Avatar" loading="lazy" />
+          </a>
+          <ul class="dropdown-menu" id="navbarDropdownMenuLink" aria-labelledby="navbarDropdownMenuLink">
+              <h6 class="dropdown-header">Dropdown header</h6>
+              <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+</nav>
