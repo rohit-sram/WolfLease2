@@ -8,7 +8,7 @@
 
 <h2 align="center">
 
-  [Link to Deployed Application](http://152.7.177.43:8010/)
+  [Link to Deployed Application](http://wolf-lease.s3-website.us-east-2.amazonaws.com/)
 
 </h2>
 
