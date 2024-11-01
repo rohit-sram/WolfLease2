@@ -85,14 +85,17 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 <!-- - Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md) -->
 
 # 🚀 Improvements
-The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via docker container...etc
+The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via AWS...etc.
 
-With WolfLease 2.0 we solved all the problems with these improvements
+WolfLease previously also lacked essential features like a user-friendly interface, secure data management, and full CRUD functionality. To improve this, we modernized the UI/UX, added login validations, and implemented full CRUD operations, giving users greater control. We also deployed the platform to the cloud for better accessibility and integrated a database to manage data effectively, enhancing security and consistency.
 
-- We added the authentication feature and make the user able to login and authenticate their profile
-- We added the frontend scripted through angularjs and nginx and connected the frontend and backend with a usable deployment
-- We also contained the application in a docker container and made the application dockerize to scaleup
-- We also added a multiple validations to the application and removed the Unnecessary Fields from Models
+With WolfLease 2.0 we solved all the problems with these improvements.
+
+- UI/UX Enhancement: Redesigned the user interface with a modern login page featuring validation, improving usability and security.
+- CRUD Operations: Added full CRUD functionality, allowing users to create, view, edit, and delete listings and profiles for enhanced content control.
+- Cloud Hosting: Deployed the application on AWS, enabling improved accessibility and scalability for a larger user base.
+- Login Validations: Integrated robust validation checks in the login process to enhance security and prevent unauthorized access.
+- Database Integration: Incorporated a database to manage and store user data effectively, ensuring data consistency and support for complex queries.
 
 # ⚙️ Built with
 
