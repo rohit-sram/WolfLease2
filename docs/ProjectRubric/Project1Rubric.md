@@ -19,24 +19,24 @@ Total Points from Self-Assessment: 255
 | Use of code  formatters. | 3| Pylint used|
 | Use of syntax checkers. | 3|Pylint used|
 | Use of code coverage |3| [codecov tool](https://app.codecov.io/gh/subodh30/WolfLease)|
-| other automated analysis tools| 3|[codecov automation](https://github.com/subodh30/WolfLease/actions)|
+| other automated analysis tools| 3|[codecov automation](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)|
 | test cases exist|3|[test directory](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/housing/tests.py)|
 | test cases are routinely executed|3|[Git Action](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)|
  | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|[CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md)|
-| issues are discussed before they are closed| 3| [WhatsApp, Microsoft Teams](https://github.com/subodh30/WolfLease/blob/master/docs) |
-| Chat channel: exists|3 | [WhatsApp, Microsoft Teams](https://github.com/subodh30/WolfLease/blob/master/docs) |
-| test cases:.a large proportion of the issues related to handling failing cases.| 2| [Issues](https://github.com/subodh30/WolfLease/issues?q=is%3Aissue+is%3Aclosed)
+| issues are discussed before they are closed| 3| [WhatsApp, Microsoft Teams](https://github.com/NCSU-SE-Fall-24/WolfLease/tree/feat-doc/docs) |
+| Chat channel: exists|3 | [WhatsApp, Microsoft Teams](https://github.com/NCSU-SE-Fall-24/WolfLease/tree/feat-doc/docs) |
+| test cases:.a large proportion of the issues related to handling failing cases.| 2| [Issues](https://github.com/NCSU-SE-Fall-24/WolfLease/issues?q=is%3Aissue+is%3Aclosed)
 | evidence that the whole team is using the same tools: everyone can get to all tools and files|3 | Use of Github throughout with frequent commits|
-| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3 |[requirements.txt](https://github.com/subodh30/WolfLease/blob/master/requirements.txt)|
+| evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3 |[requirements.txt](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/requirements.txt)|
 | evidence that the whole team is using the same tools (e.g. tutor can ask anyone to share screen, they demonstrate the system running on their computer)|3 |
 | evidence that the members of the team are working across multiple places in the code base|3 |
-|short release cycles |3| [Releases](https://github.com/subodh30/WolfLease/releases)
-| Does your website and documentation provide a clear, high-level overview of your software? | 3 | [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-| Does your website and documentation clearly describe the type of user who should use your software? | 3| [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
+|short release cycles |3| [Releases](https://github.com/NCSU-SE-Fall-24/WolfLease/releases)
+| Does your website and documentation provide a clear, high-level overview of your software? | 3 | [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+| Does your website and documentation clearly describe the type of user who should use your software? | 3| [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
 | Do you publish case studies to show how your software has been used by yourself and others? | 0 |
 | Is the name of your project/software unique? |3 |
 | Is your project/software name free from trademark violations? |3 |
-| Is your software available as a package that can be deployed without building it? | 0|
+| Is your software available as a package that can be deployed without building it? | 3| [AWS](http://wolf-lease.s3-website.us-east-2.amazonaws.com/)
 | Is your software available for free? |3 |
 | Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository? |3 |
 | Is your software hosted in an established, third-party repository like GitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)? |3 |[repo](https://github.com/subodh30/WolfLease)|
