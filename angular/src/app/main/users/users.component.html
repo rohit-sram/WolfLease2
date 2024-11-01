@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-6">
-        <h1>Owners Grid</h1>
+        <h1>Users Grid</h1>
     </div>
     <div class="col-6">
         <div class="float-end me-2">
@@ -16,7 +16,7 @@
         <p-table #dt2 [columns]="columns" [value]="users" [reorderableColumns]="true"
             [resizableColumns]="true" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 15]"
             [scrollable]="true" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}"
-            [showCurrentPageReport]="true" scrollDirection="both" [globalFilterFields]="['id','contact_email', 'contact_number', 'user_type', 'dob', 'gender', 'pref_smoking', 'pref_drinking', 'pref_veg', 'flat_id_id']"
+            [showCurrentPageReport]="true" scrollDirection="both" [globalFilterFields]="['id','contact_email', 'contact_number', 'user_type', 'dob', 'gender', 'pref_smoking', 'pref_drinking', 'pref_veg', 'flat_id']"
             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
             <ng-template pTemplate="caption">
                 <div class="row">
@@ -176,9 +176,9 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="flat_id_id" class="form-label required">Flat Id</label>
-                            <input type="number" class="form-control" id="flat_id_id" formControlName="flat_id_id" aria-describedby="flat_id_id" appTwoDigitDirective>
-                            <span class="error" *ngIf="userForm.get('flat_id_id')?.touched && userForm.get('flat_id_id')?.valid == false" >
+                            <label for="flat_id" class="form-label required">Flat Id</label>
+                            <input type="number" class="form-control" id="flat_id" formControlName="flat_id" aria-describedby="flat_id" appTwoDigitDirective>
+                            <span class="error" *ngIf="userForm.get('flat_id')?.touched && userForm.get('flat_id')?.valid == false" >
                                 Please Enter Flat Id
                             </span>
                         </div>      
