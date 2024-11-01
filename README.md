@@ -71,18 +71,18 @@
 </div>
 <br>
 
-Finding apartments on a lease can be a difficult and time-consuming task. We can sublease a room to save time, possibly rent, and enjoy the benefits of a shorter lease time. WolfLease is an application to help people find Apartments offering rooms on sublease and move in faster! WolfLease allows us to search for flats based on location, facilities, sublease start and end dates, etc.
+WolfLease is a comprehensive housing platform tailored for NCSU students seeking off-campus accommodations. Whether you’re looking to find a sublease, connect with a roommate, or secure the perfect apartment near campus, WolfLease streamlines the entire process, making your housing search easy and efficient. With features such as a user-friendly interface, detailed housing listings, secure login, and a robust database, WolfLease aims to provide students with a reliable, seamless leasing experience. Hosted on the cloud and designed with convenience in mind, WOLF Lease is the ultimate one-stop solution for NCSU’s student housing needs.
 
 ## Phase 1
 https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-bd49-f906de124589.mp4
 
-## Phase 2
-[![WolfLease2.0](./imgs/WolfLease.png)](https://drive.google.com/file/d/1wke2At9bs9NQ2qyV2rcWIWxFngpunB3k/view?usp=sharing)
+<!-- ## Phase 2
+[![WolfLease2.0](./imgs/WolfLease.png)](https://drive.google.com/file/d/1wke2At9bs9NQ2qyV2rcWIWxFngpunB3k/view?usp=sharing) -->
 
 # 📋 Rubric
 
 - Phase 1 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/ProjectRubric/Project1Rubric.md)
-- Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md)
+<!-- - Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md) -->
 
 # 🚀 Improvements
 The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via docker container...etc
