@@ -3,7 +3,7 @@ Total Points from Self-Assessment: 255
 
 | Grading Points|Self-Assessment|Links|
 |-----|---------|-----|
-|workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)| 3 | [Contributor Stats](https://github.com/subodh30/WolfLease/graphs/contributors)|
+|workloadd is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)| 3 | [Contributor Stats](https://github.com/NCSU-SE-Fall-24/WolfLease/pulse)|
 | Number of commits| 3 |[commit stats](https://github.com/subodh30/WolfLease/graphs/contributors) |
 | Number of commits: by different people| 3 |[commit stats](https://github.com/subodh30/WolfLease/graphs/contributors) |
 | Issues reports: there are **many**| 3 |[bug reports](https://github.com/users/subodh30/projects/2)|
