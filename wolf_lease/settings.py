@@ -81,8 +81,7 @@ REST_FRAMEWORK = {
 }
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-print(os.getenv('DB_PASSWORD'))
-print(os.getenv('DB_HOST'))
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
