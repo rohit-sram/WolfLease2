@@ -193,12 +193,12 @@ With WolfLease 2.0 we solved all the problems with these improvements.
 |`GET`|http://localhost:8000/users?search={contact_number} | Search for a User with given contact number |
 
 # 🚗 New Features Added [...](https://github.com/divyang02/WolfLease/discussions/35)
-   - [FrontEnd Implementation](https://github.com/divyang02/WolfLease/tree/master/angular#readme)
-   - Docker 
-   - FrontEnd and BackEnd Connection with Usable Deployment
-   - Authentication
-   - Removal of Unnecessary Fields from Models
-   - Added Validations
+   - [FrontEnd Implementation](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/angular/README.md)
+   - Modernized UI/UX
+   - Login Page Validation
+   - Full CRUD Operations
+   - Cloud Hosting
+   - Database Integration
 
 <h1>❗ TroubleShooting and Help Guide</h1>
 
