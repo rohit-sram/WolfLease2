@@ -1,0 +1,18 @@
+:host ::ng-deep.p-datatable-table tr:nth-child(even){
+    background-color: #E1E1E1;
+    color: black;
+}
+
+:host ::ng-deep.p-datatable-table th{
+    background-color: #E1E1E1;
+    color: black;
+}
+
+:host ::ng-deep.p-datatable .p-sortable-column-icon {
+    color: black;
+}
+
+.error {
+    color: red;
+}
+
