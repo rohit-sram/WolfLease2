@@ -24,7 +24,7 @@ enum UserColumns {
   pref_smoking = "Preferred smoking",
   pref_drinking = "Preferred drinking",
   pref_veg = "Preferred vegetarian",
-  flat_id_id = "Flat ID",
+  flat_id = "Flat ID",
 }
 @Component({
   selector: 'app-users',
@@ -44,7 +44,7 @@ export class UsersComponent {
     pref_smoking: string;
     pref_drinking: string;
     pref_veg: string;
-    flat_id_id: number;
+    flat_id: number;
     id: number;
   }>
   columns: Column[] = Object.entries(UserColumns).map(([key, value]) => ({ field: key, header: value }));
@@ -83,7 +83,7 @@ export class UsersComponent {
       input_pref_smoking: new FormControl(false, { validators: [Validators.required] }),
       input_pref_drinking: new FormControl(false, { validators: [Validators.required] }),
       input_pref_veg: new FormControl(false, { validators: [Validators.required] }),
-      flat_id_id: new FormControl(null),
+      flat_id: new FormControl(null),
       id: new FormControl(''),
     })
   }
@@ -161,7 +161,7 @@ export class UsersComponent {
         input_pref_smoking: product.pref_smoking === 'Y' ? true : false,
         input_pref_drinking: product.pref_drinking === 'Y' ? true : false,
         input_pref_veg: product.pref_veg === 'Y' ? true : false,
-        flat_id_id: product.flat_id_id,
+        flat_id: product.flat_id,
       });
     } else if (action === 'update') {
       const formData = this.userForm.value;
