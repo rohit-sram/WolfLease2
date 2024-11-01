@@ -3,16 +3,16 @@ Total Points from Self-Assessment: 255
 
 | Grading Points|Self-Assessment|Links|
 |-----|---------|-----|
-|workloadd is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)| 3 | [Contributor Stats](https://github.com/NCSU-SE-Fall-24/WolfLease/pulse)|
-| Number of commits| 3 |[commit stats](https://github.com/subodh30/WolfLease/graphs/contributors) |
-| Number of commits: by different people| 3 |[commit stats](https://github.com/subodh30/WolfLease/graphs/contributors) |
-| Issues reports: there are **many**| 3 |[bug reports](https://github.com/users/subodh30/projects/2)|
-|  issues are being  closed| 3 | [closed tasks](https://github.com/users/subodh30/projects/2)|
-| DOI badge: exists | 3 | [DOI](https://github.com/subodh30/WolfLease/blob/master/README.md)
-|Docs: doco generated , format not ugly | 3 |[README.md](https://github.com/subodh30/WolfLease/blob/master/README.md) |
-|Docs: what: point descriptions of each class/function (in isolation) | 3| [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3| [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3| [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
+|workload is spread over the whole team (one team member is often Xtimes more productive than the others... but nevertheless, here is a track record that everyone is contributing a lot)| 3 | [Contributor Stats](https://github.com/NCSU-SE-Fall-24/WolfLease/pulse)|
+| Number of commits| 3 |[commit stats](https://github.com/NCSU-SE-Fall-24/WolfLease/pulse) |
+| Number of commits: by different people| 3 |[commit stats](https://github.com/NCSU-SE-Fall-24/WolfLease/pulse) |
+| Issues reports: there are **many**| 3 |[bug reports](https://github.com/NCSU-SE-Fall-24/WolfLease/issues)|
+|  issues are being  closed| 3 | [closed tasks](https://github.com/NCSU-SE-Fall-24/WolfLease/issues)|
+| DOI badge: exists | 3 | [DOI](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)
+|Docs: doco generated , format not ugly | 3 |[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md) |
+|Docs: what: point descriptions of each class/function (in isolation) | 3| [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+|Docs: how: for common use cases X,Y,Z mini-tutorials showing worked examples on how to do X,Y,Z|3| [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+|Docs: why: docs tell a story, motivate the whole thing, deliver a punchline that makes you want to rush out and use the thing|3| [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
 |Docs: short video, animated, hosted on your repo. That convinces people why they want to work on your code.| 0 |  |
 | Use of version control tools|3 |
 |Use of  style checkers | 3|Pylint used|
