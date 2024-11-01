@@ -634,7 +634,7 @@ class LeaseTests(APITestCase, TestCase):
 
     def test_delete_lease(self):
         """
-        Ensure we can delete a lease object.
+        Ensure we can deletee a lease object. 
         """
         url = '/lease'
         Lease.objects.create(lease_start_date='2022-10-05',
