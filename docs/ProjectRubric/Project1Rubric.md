@@ -1,5 +1,5 @@
 # Project Rubric
-Total Points from Self-Assessment: 255
+Total Points from Self-Assessment: 258
 
 | Grading Points|Self-Assessment|Links|
 |-----|---------|-----|
@@ -39,18 +39,19 @@ Total Points from Self-Assessment: 255
 | Is your software available as a package that can be deployed without building it? | 3| [AWS](http://wolf-lease.s3-website.us-east-2.amazonaws.com/)
 | Is your software available for free? |3 |
 | Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository? |3 |
-| Is your software hosted in an established, third-party repository like GitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)? |3 |[repo](https://github.com/subodh30/WolfLease)|
-| Is your documentation clearly available on your website or within your software? |3 | [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-| Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use? | 3 |[README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-| If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software? |3 |[README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-| Do you provide a comprehensive guide to all your software’s commands, functions and options? |3| [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
-| Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? | 3|[README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|[CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md)|
-| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation? | 3|[README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
+| Is your software hosted in an established, third-p
+arty repository like GitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)? |3 |[repo](https://github.com/subodh30/WolfLease)|
+| Is your documentation clearly available on your website or within your software? |3 | [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+| Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use? | 3 |[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+| If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software? |3 |[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+| Do you provide a comprehensive guide to all your software’s commands, functions and options? |3| [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
+| Do you provide troubleshooting information that describes the symptoms and step-by-step solutions for problems and error messages? | 3|[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|[CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md)|
+| If your software can be used as a library, package or service by other software, do you provide comprehensive API documentation? | 3|[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
 | Do you store your documentation under revision control with your source code? |3|
 | Do you publish your release history e.g. release data, version numbers, key features of each release etc. on your web site or in your documentation? | 3 |
-| Does your software describe how a user can get help with using your software? |3 | [CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md)|
-| Does your website and documentation describe what support, if any, you provide to users and developers? |3 | [CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md)|
-| Does your project have an e-mail address or forum that is solely for supporting users? |3 | [CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md)|
+| Does your software describe how a user can get help with using your software? |3 | [CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md)|
+| Does your website and documentation describe what support, if any, you provide to users and developers? |3 | [CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md)|
+| Does your project have an e-mail address or forum that is solely for supporting users? |3 | [CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md)|
 | Are e-mails to your support e-mail address received by more than one person? | 3|
 | Does your project have a ticketing system to manage bug reports and feature requests? | 3 |
 | Is your project's ticketing system publicly visible to your users, so they can view bug reports and feature requests? | 3|
@@ -66,15 +67,15 @@ Total Points from Self-Assessment: 255
 | Are releases tagged in the repository? * | 3 |  |
 | Is there a branch of the repository that is always stable? (i.e. tests always pass, code always builds successfully) | 3 | Master branch is always kept stable by restrciting direct commits to master|
 | Do you back-up your repository? | 3 | Github and cloned repo's developers worked on |
-| Do you provide publicly-available instructions for building your software from the source code? | 3 | [INSTALL.md](https://github.com/subodh30/WolfLease/blob/master/INSTALL.md) |
+| Do you provide publicly-available instructions for building your software from the source code? | 3 | [INSTALL.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/INSTALL.md) |
 | Can you build, or package, your software using an automated tool? | 3 | We can do this using Docker |
-| Do you provide publicly-available instructions for deploying your software? | 3 | [INSTALL.md](https://github.com/subodh30/WolfLease/blob/master/INSTALL.md) |
-| Does your documentation list all third-party dependencies? | 3 | [requirements.txt](https://github.com/subodh30/WolfLease/blob/master/requirements.txt) |
-| Does your documentation list the version number for all third-party dependencies? | 3 | [requirements.txt](https://github.com/subodh30/WolfLease/blob/master/requirements.txt) |
+| Do you provide publicly-available instructions for deploying your software? | 3 | [INSTALL.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/INSTALL.md) |
+| Does your documentation list all third-party dependencies? | 3 | [requirements.txt](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/requirements.txt) |
+| Does your documentation list the version number for all third-party dependencies? | 3 | [requirements.txt](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/requirements.txt) |
 | Does your software list the web address, and licences for all third-party dependencies and say whether the dependencies are mandatory or optional? | 0 |  |
-| Can you download dependencies using a dependency management tool or package manager? | 3 | [requirements.txt](https://github.com/subodh30/WolfLease/blob/master/requirements.txt) listed, evidenced in use of [Github Actions](https://github.com/subodh30/WolfLease/actions) |
-| Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | 3 | [INSTALL.md](https://github.com/subodh30/WolfLease/blob/master/INSTALL.md) |
-| Do you have an automated test suite for your software? | 3 | [INSTALL.md](https://github.com/subodh30/WolfLease/blob/master/INSTALL.md) |
+| Can you download dependencies using a dependency management tool or package manager? | 3 | [requirements.txt](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/requirements.txt) listed, evidenced in use of [Github Actions](https://github.com/subodh30/WolfLease/actions) |
+| Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | 3 | [INSTALL.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/INSTALL.md) |
+| Do you have an automated test suite for your software? | 3 | [INSTALL.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/INSTALL.md) |
 | Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | 3 | [Github Actions](https://github.com/subodh30/WolfLease/actions) |
 | Do you use continuous integration, automatically running tests whenever changes are made to your source code? | 3 | [Github Actions](https://github.com/subodh30/WolfLease/actions) |
 | Are your test results publicly visible? | 3 | [Github Actions](https://github.com/subodh30/WolfLease/actions) |
