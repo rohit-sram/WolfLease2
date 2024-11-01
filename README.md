@@ -216,18 +216,8 @@ Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDU
 
 <h2> Phase 1 </h2>
 
-[Subodh Gujar](https://github.com/subodh30) | [Ameya Vaichalkar](https://github.com/ameyagv) | [Rohan Shiveshwarkar](https://github.com/RoninS28) | [Kunal Patil](https://github.com/kunalpatil1810) | [Yash Sonar](https://github.com/Yash-567)
+## Group - 79
 
-<h2> Phase 2 </h2>
+[Jap Purohit](https://github.com/jappurohit041) | [Kenil Patel](https://github.com/Kenil2211) | [Mihir Shah](https://github.com/mihir1372) | 
 
-### Group 46
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/divyang02"><img src="https://avatars.githubusercontent.com/u/23277855?v=4" width="75px;" alt=""/><br /><sub><b>Divyang Doshi</b></sub></a></td>
-    <td align="center"><a href="https://github.com/gargpriyam21"><img src="https://avatars.githubusercontent.com/u/32238511?v=4" width="75px;" alt=""/><br /><sub><b>Priyam Garg</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/bhansaliyash"><img src="https://avatars.githubusercontent.com/u/21220880?v=4" width="75px;" alt=""/><br /><sub><b>Yash Bhansali</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/devmehta1999"><img src="https://avatars.githubusercontent.com/u/48157574?v=4" width="75px;" alt=""/><br /><sub><b>Dev Mehta</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/manognapc"><img src="https://avatars.githubusercontent.com/u/112452957?v=4" width="75px;" alt=""/><br /><sub><b>Manogna Choudary Potluri</b></sub></a><br /></td>
-  </tr>
-</table>
