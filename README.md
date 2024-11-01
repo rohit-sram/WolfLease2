@@ -191,7 +191,7 @@ With WolfLease 2.0 we solved all the problems with these improvements
 
 # 🚗 New Features Added [...](https://github.com/divyang02/WolfLease/discussions/35)
    - [FrontEnd Implementation](https://github.com/divyang02/WolfLease/tree/master/angular#readme)
-   - Docker Integration
+   - Docker 
    - FrontEnd and BackEnd Connection with Usable Deployment
    - Authentication
    - Removal of Unnecessary Fields from Models
