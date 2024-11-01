@@ -75,7 +75,7 @@ export class OwnersComponent implements OnInit {
     } else if (action === 'create') {
       const formData = this.ownerForm.value;
       delete formData.id
-      console.log(formData, action)
+  
       try {
         this.spinner.show();
         const { api_response } = await this.ownerService.createOwner(formData);
@@ -106,7 +106,7 @@ export class OwnersComponent implements OnInit {
       });
     } else if (action === 'update') {
       const formData = this.ownerForm.value;
-      console.log(formData, action)
+  
       try {
         this.spinner.show();
         const { api_response } = await this.ownerService.updateOwner(formData);
