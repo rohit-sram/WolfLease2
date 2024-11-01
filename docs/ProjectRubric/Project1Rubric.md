@@ -20,9 +20,9 @@ Total Points from Self-Assessment: 255
 | Use of syntax checkers. | 3|Pylint used|
 | Use of code coverage |3| [codecov tool](https://app.codecov.io/gh/subodh30/WolfLease)|
 | other automated analysis tools| 3|[codecov automation](https://github.com/subodh30/WolfLease/actions)|
-| test cases exist|3|[test directory](https://github.com/subodh30/WolfLease/blob/master/housing/tests.py)|
-| test cases are routinely executed|3|[Git Action](https://github.com/subodh30/WolfLease/actions)|
- | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|[CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md)|
+| test cases exist|3|[test directory](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/housing/tests.py)|
+| test cases are routinely executed|3|[Git Action](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)|
+ | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|[CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md)|
 | issues are discussed before they are closed| 3| [WhatsApp, Microsoft Teams](https://github.com/subodh30/WolfLease/blob/master/docs) |
 | Chat channel: exists|3 | [WhatsApp, Microsoft Teams](https://github.com/subodh30/WolfLease/blob/master/docs) |
 | test cases:.a large proportion of the issues related to handling failing cases.| 2| [Issues](https://github.com/subodh30/WolfLease/issues?q=is%3Aissue+is%3Aclosed)
