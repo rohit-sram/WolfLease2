@@ -192,7 +192,7 @@ With WolfLease 2.0 we solved all the problems with these improvements.
 |`GET`|http://localhost:8000/users?search={email} | Search for an User with given email |
 |`GET`|http://localhost:8000/users?search={contact_number} | Search for a User with given contact number |
 
-# 🚗 New Features Added [...](https://github.com/divyang02/WolfLease/discussions/35)
+# 🚗 New Features Added -
    - [FrontEnd Implementation](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/angular/README.md)
    - Modernized UI/UX
    - Login Page Validation
