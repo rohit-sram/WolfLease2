@@ -76,29 +76,29 @@ arty repository like GitHub (https://github.com), BitBucket (https://bitbucket.o
 | Can you download dependencies using a dependency management tool or package manager? | 3 | [requirements.txt](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/requirements.txt) listed, evidenced in use of [Github Actions](https://github.com/subodh30/WolfLease/actions) |
 | Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? | 3 | [INSTALL.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/INSTALL.md) |
 | Do you have an automated test suite for your software? | 3 | [INSTALL.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/INSTALL.md) |
-| Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | 3 | [Github Actions](https://github.com/subodh30/WolfLease/actions) |
-| Do you use continuous integration, automatically running tests whenever changes are made to your source code? | 3 | [Github Actions](https://github.com/subodh30/WolfLease/actions) |
-| Are your test results publicly visible? | 3 | [Github Actions](https://github.com/subodh30/WolfLease/actions) |
+| Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? | 3 | [Github Actions](https://github.com/NCSU-SE-Fall-24/WolfLease/actions) |
+| Do you use continuous integration, automatically running tests whenever changes are made to your source code? | 3 | [Github Actions](https://github.com/NCSU-SE-Fall-24/WolfLease/actions) |
+| Are your test results publicly visible? | 3 | [Github Actions](https://github.com/NCSU-SE-Fall-24/WolfLease/actions) |
 | Are all manually-run tests documented? | 3 | All test cases are automated and documented |
 | Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? | 0 |  |
-| Does your website state how many projects and users are associated with your project? | 3 | [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md)|
+| Does your website state how many projects and users are associated with your project? | 3 | [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
 | Do you provide success stories on your website? | 0 |  |
-| Do you list your important partners and collaborators on your website? | 3 | [Insights](https://github.com/subodh30/WolfLease/pulse) |
-| Do you list your project's publications on your website or link to a resource where these are available? | 3 | [Releases](https://github.com/subodh30/WolfLease/releases) |
+| Do you list your important partners and collaborators on your website? | 3 | [Insights](https://github.com/NCSU-SE-Fall-24/WolfLease/pulse) |
+| Do you list your project's publications on your website or link to a resource where these are available? | 3 | [Releases](http://wolf-lease.s3-website.us-east-2.amazonaws.com/) |
 | Do you list third-party publications that refer to your software on your website or link to a resource where these are available? | 0 |  |
 | Can users subscribe to notifications to changes to your source code repository? | 3 |  |
 | If your software is developed as an open source project (and, not just a project developing open source software), do you have a governance model? | 3 |  |
 | Do you accept contributions (e.g. bug fixes, enhancements, documentation updates, tutorials) from people who are not part of your project? | 3 |  |
-| Do you have a contributions policy? | 3 | [CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md) |
-| Is your contributions' policy publicly available? | 3 | [CONTRIBUTING.md](https://github.com/subodh30/WolfLease/blob/master/CONTRIBUTING.md) |
+| Do you have a contributions policy? | 3 | [CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md) |
+| Is your contributions' policy publicly available? | 3 | [CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CONTRIBUTING.md) |
 | Do contributors keep the copyright/IP of their contributions? | 0 | Project under MIT license |
-| Does your website and documentation clearly state the copyright owners of your software and documentation? | 3 | [LICENSE](https://github.com/subodh30/WolfLease/blob/master/LICENSE) |
+| Does your website and documentation clearly state the copyright owners of your software and documentation? | 3 | [LICENSE](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/LICENSE) |
 | Does each of your source code files include a copyright statement? | 1 | Project under MIT license |
-| Does your website and documentation clearly state the licence of your software? | 3 | [README.md](https://github.com/subodh30/WolfLease/blob/master/README.md) |
-| Is your software released under an open source licence? | 3 | [LICENSE](https://github.com/subodh30/WolfLease/blob/master/LICENSE) |
-| Is your software released under an OSI-approved open-source licence? | 3 | [LICENSE](https://github.com/subodh30/WolfLease/blob/master/LICENSE) |
+| Does your website and documentation clearly state the licence of your software? | 3 | [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md) |
+| Is your software released under an open source licence? | 3 | [LICENSE](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/LICENSE) |
+| Is your software released under an OSI-approved open-source licence? | 3 | [LICENSE](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/LICENSE) |
 | Does each of your source code files include a licence header?  | 0 |  |
-| Do you have a recommended citation for your software? | 3 |[CITATION.cff](https://github.com/subodh30/WolfLease/blob/master/CITATION.cff)  |
-| Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? | 3 | [Issues](https://github.com/subodh30/WolfLease/issues) |
+| Do you have a recommended citation for your software? | 3 |[CITATION.cff](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/CITATION.cff)  |
+| Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? | 3 | [Issues](https://github.com/NCSU-SE-Fall-24/WolfLease/issues) |
 | Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? |  | N/A |
 | Do you make timely announcements of the deprecation of components, APIs, etc.? | 3 | We will make timely announcements|
