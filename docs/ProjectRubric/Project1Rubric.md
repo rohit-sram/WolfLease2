@@ -23,8 +23,8 @@ Total Points from Self-Assessment: 258
 | test cases exist|3|[test directory](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/housing/tests.py)|
 | test cases are routinely executed|3|[Git Action](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)|
  | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|[CONTRIBUTING.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/CONTRIBUTING.md)|
-| issues are discussed before they are closed| 3| [WhatsApp, Microsoft Teams](https://github.com/NCSU-SE-Fall-24/WolfLease/tree/staging/docs) |
-| Chat channel: exists|3 | [WhatsApp, Microsoft Teams](https://github.com/NCSU-SE-Fall-24/WolfLease/tree/staging/docs) |
+| issues are discussed before they are closed| 3| [Home, WhatsApp, Microsoft Teams](https://github.com/NCSU-SE-Fall-24/WolfLease/tree/staging/docs) |
+| Chat channel: exists|3 | [Home, WhatsApp, Microsoft Teams](https://github.com/NCSU-SE-Fall-24/WolfLease/tree/staging/docs) |
 | test cases:.a large proportion of the issues related to handling failing cases.| 2| [Issues](https://github.com/NCSU-SE-Fall-24/WolfLease/issues?q=is%3Aissue+is%3Aclosed)
 | evidence that the whole team is using the same tools: everyone can get to all tools and files|3 | Use of Github throughout with frequent commits|
 | evidence that the whole team is using the same tools (e.g. config files in the repo, updated by lots of different people)|3 |[requirements.txt](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/requirements.txt)|
