@@ -116,105 +116,6 @@ class OwnerTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]['contact_number'], '22222')
-
-
-class InterestedTests(APITestCase, TestCase):
-    """
-        This is Interested test class.
-    """
-
-    def setUp(self):
-        user = UserAuth.objects.create_user(username='dd',
-                                            password='dd',
-                                            email='dd@eamil.com',
-                                            first_name='dd',
-                                            last_name='dd')
-        user.save()
-        token, _ = Token.objects.get_or_create(user=user)
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
-
-    @classmethod
-    def setUpTestData(cls):
-        """
-            This is setUp class method to populate the database
-        """
-        cls.Owner = Owner.objects.create(contact_number='1234567890',
-                                         contact_email='test@testing.com',
-                                         password='test')
-        cls.Lease = Lease.objects.create(lease_start_date='2022-10-05',
-                                         lease_end_date='2026-10-04')
-        cls.Apartment = Apartment.objects.create(owner_id=Owner.objects.get(),
-                                                 address="Stovall Dr")
-        cls.Flat = Flat.objects.create(
-            availability='True',
-            associated_apt_id=Apartment.objects.get(),
-            lease_id=Lease.objects.get(),
-            floor_number=3,
-            rent_per_room=450)
-        cls.User = User.objects.create(flat_id=Flat.objects.get(),
-                                       contact_number='7876756487',
-                                       dob='2000-10-07')
-        cls.Intested = Interested.objects.create(
-            user_id=User.objects.get(),
-            flat_id=Flat.objects.get(),
-            apartment_id=Apartment.objects.get())
-        cls.otherFlat = Flat.objects.create(
-            availability='True',
-            associated_apt_id=Apartment.objects.get(),
-            lease_id=Lease.objects.get(),
-            floor_number=2,
-            rent_per_room=780)
-
-    def test_create_interested(self):
-        """
-        Ensure we can create a new interested object.
-        """
-        url = '/interests'
-        data = {
-            'user_id': str(User.objects.get().id),
-            'flat_id': str(Flat.objects.first().id),
-            'apartment_id': str(Apartment.objects.get().id)
-        }
-        response = self.client.post(url, data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        self.assertEqual(Interested.objects.count(), 2)
-        self.assertEqual(str(User.objects.get()),
-                         str(Interested.objects.last().user_id))
-
-    def test_show_interested(self):
-        """
-        Ensure we can fetch a new interested object.
-        """
-        url = '/interests'
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(Interested.objects.count(), 1)
-
-    def test_update_interested(self):
-        """
-        Ensure we can update a interested object.
-        """
-        url = '/interests'
-        url = url + '/' + '1'
-        data = {'flat_id': str(Flat.objects.last().id)}
-        response = self.client.patch(url, data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(Interested.objects.count(), 1)
-        self.assertEqual(str(Interested.objects.get().flat_id),
-                         str(Flat.objects.last()))
-
-    def test_delete_interested(self):
-        """
-        Ensure we can delete a new interested object.
-        """
-        url = '/interests'
-        url = url + '/' + '1'
-        data = {}
-        response = self.client.delete(url, data, format='json')
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-        self.assertEqual(Interested.objects.count(), 0)
-
-
 class FlatTests(APITestCase, TestCase):
     """
         This is Flat test class.
@@ -644,3 +545,99 @@ class LeaseTests(APITestCase, TestCase):
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(Lease.objects.count(), 0)
+
+class InterestedTests(APITestCase, TestCase):
+    """
+        This is Interested test class.
+    """
+
+    def setUp(self):
+        user = UserAuth.objects.create_user(username='dd',
+                                            password='dd',
+                                            email='dd@eamil.com',
+                                            first_name='dd',
+                                            last_name='dd')
+        user.save()
+        token, _ = Token.objects.get_or_create(user=user)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + token.key)
+
+    @classmethod
+    def setUpTestData(cls):
+        """
+            This is setUp class method to populate the database
+        """
+        cls.Owner = Owner.objects.create(contact_number='1234567890',
+                                         contact_email='test@testing.com',
+                                         password='test')
+        cls.Lease = Lease.objects.create(lease_start_date='2022-10-05',
+                                         lease_end_date='2026-10-04')
+        cls.Apartment = Apartment.objects.create(owner_id=Owner.objects.get(),
+                                                 address="Stovall Dr")
+        cls.Flat = Flat.objects.create(
+            availability='True',
+            associated_apt_id=Apartment.objects.get(),
+            lease_id=Lease.objects.get(),
+            floor_number=3,
+            rent_per_room=450)
+        cls.User = User.objects.create(flat_id=Flat.objects.get(),
+                                       contact_number='7876756487',
+                                       dob='2000-10-07')
+        cls.Intested = Interested.objects.create(
+            user_id=User.objects.get(),
+            flat_id=Flat.objects.get(),
+            apartment_id=Apartment.objects.get())
+        cls.otherFlat = Flat.objects.create(
+            availability='True',
+            associated_apt_id=Apartment.objects.get(),
+            lease_id=Lease.objects.get(),
+            floor_number=2,
+            rent_per_room=780)
+
+    def test_create_interested(self):
+        """
+        Ensure we can create a new interested object.
+        """
+        url = '/interests'
+        data = {
+            'user_id': str(User.objects.get().id),
+            'flat_id': str(Flat.objects.first().id),
+            'apartment_id': str(Apartment.objects.get().id)
+        }
+        response = self.client.post(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(Interested.objects.count(), 2)
+        self.assertEqual(str(User.objects.get()),
+                          str(Interested.objects.last().user_id))
+
+    def test_show_interested(self):
+        """
+        Ensure we can fetch a new interested object.
+        """
+        url = '/interests'
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(Interested.objects.count(), 1)
+
+    def test_update_interested(self):
+        """
+        Ensure we can update a interested object.
+        """
+        url = '/interests'
+        url = url + '/' + str(Interested.objects.last().id)
+        data = {'flat_id': Flat.objects.last().id, 'user_id': User.objects.last().id, 'apartment_id': Apartment.objects.last().id}
+        response = self.client.put(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(Interested.objects.count(), 1)
+        self.assertEqual(str(Interested.objects.get().flat_id),
+                         str(Flat.objects.last()))
+
+    def test_delete_interested(self):
+        """
+        Ensure we can delete a new interested object.
+        """
+        url = '/interests'
+        url = url + '/' + str(Interested.objects.last().id)
+        data = {}
+        response = self.client.delete(url, data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertEqual(Interested.objects.count(), 0)
