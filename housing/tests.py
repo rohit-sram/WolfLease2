@@ -178,7 +178,7 @@ class InterestedTests(APITestCase, TestCase):
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Interested.objects.count(), 2)
-        self.assertEquals(str(User.objects.get()),
+        self.assertEqual(str(User.objects.get()),
                           str(Interested.objects.last().user_id))
 
     def test_show_interested(self):
@@ -271,7 +271,7 @@ class FlatTests(APITestCase, TestCase):
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Flat.objects.count(), 2)
-        self.assertEquals(
+        self.assertEqual(
             'True',
             str(Flat.objects.filter(availability='True').get().availability))
 
