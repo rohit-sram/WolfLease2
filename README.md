@@ -76,9 +76,6 @@ WolfLease is a comprehensive housing platform tailored for NCSU students seeking
 ## Phase 1
 https://github.com/user-attachments/assets/8d99d027-1d08-459e-8477-89edda0dd540
 
-
-[![WolfLease2.0](./imgs/WolfLease.png)](https://drive.google.com/file/d/1wke2At9bs9NQ2qyV2rcWIWxFngpunB3k/view?usp=sharing) -->
-
 # 📋 Rubric
 
 - Phase 1 Rubric: [link](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/docs/ProjectRubric/Project1Rubric.md)
