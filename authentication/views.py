@@ -59,6 +59,7 @@ class LogoutView(views.APIView):
         content = {'message': 'Logout successfull'}
         return Response(content)
 
+
 class GetUserView(views.APIView):
     """
     Get user details.
@@ -73,5 +74,10 @@ class GetUserView(views.APIView):
         [type] -- [description]
         """
         user = request.user
-        content = {'username': user.username, 'email': user.email, 'first_name': user.first_name, 'last_name': user.last_name}
+        content = {
+            'username': user.username,
+            'email': user.email,
+            'first_name': user.first_name,
+            'last_name': user.last_name
+        }
         return Response(content)
