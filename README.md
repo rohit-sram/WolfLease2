@@ -78,7 +78,7 @@ https://github.com/user-attachments/assets/8d99d027-1d08-459e-8477-89edda0dd540
 
 # 📋 Rubric
 
-- Phase 1 Rubric: [link](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/docs/ProjectRubric/Project1Rubric.md)
+- Phase 1 Rubric: [link](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/docs/ProjectRubric/Project1Rubric.md)
 <!-- - Phase 2 Rubric: [link](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md) -->
 
 # 🚀 Improvements
