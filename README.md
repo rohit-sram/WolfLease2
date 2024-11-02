@@ -16,15 +16,15 @@
 <div align="center">
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NCSU-SE-Fall-24/WolfLease/Django%20CI)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)
-[![codecov](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease/branch/master/graph/badge.svg?token=LgYrIJBlbU)](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease)
+[![codecov](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease/branch/staging/graph/badge.svg?token=LgYrIJBlbU)](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease)
 <!-- [![Python Style Checker](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/style_checker.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/style_checker.yml) -->
 [![Formatting python code](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/code_formatter.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/code_formatter.yml)
-[![Lint Python](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml)
+[![Lint Python](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml/badge.svg?branch=staging)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml)
 
 </div>
 
 <p align="center">
-<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/blob/main/LICENSE" target="blank">
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/blob/staging/LICENSE" target="blank">
 <img src="https://img.shields.io/github/license/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" alt="WolfLease license" />
 </a>
 <a href="https://github.com/NCSU-SE-Fall-24/WolfLease/fork" target="blank">
