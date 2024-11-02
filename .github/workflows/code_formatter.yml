@@ -1,5 +1,8 @@
 name: Formatting python code
 on: push
+env:
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 jobs:
   autoyapf:
     runs-on: ubuntu-latest

@@ -4,7 +4,9 @@ on:
   push:
   pull_request:
     branches: [ "staging" ]
-
+env:
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 jobs:
   build:
 
