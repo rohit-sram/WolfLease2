@@ -2,7 +2,7 @@
   WolfLease 2.0
 
   [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/) 
-  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7402459.svg)](https://doi.org/10.5281/zenodo.7402459)
+  [![DOI](https://zenodo.org/badge/878717868.svg)](https://doi.org/10.5281/zenodo.14027449)
 
 </h1>
 
