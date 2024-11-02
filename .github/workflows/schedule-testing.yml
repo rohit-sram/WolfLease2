@@ -2,7 +2,7 @@ name: Testing Schedule CI
 
 on:
     schedule:
-        - cron: '*/1 * * * *'
+        - cron: '0 0 * * *'
 env:
   DB_HOST: ${{ secrets.DB_HOST }}
   DB_PASSWORD: ${{ secrets.DB_PASSWORD }}

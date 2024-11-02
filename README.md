@@ -15,11 +15,12 @@
 <!--Badges-->
 <div align="center">
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NCSU-SE-Fall-24/WolfLease/Django%20CI)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)
+[![GitHub Workflow Status](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/django.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/django.yml)
 [![codecov](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease/branch/staging/graph/badge.svg?token=LgYrIJBlbU)](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease)
 <!-- [![Python Style Checker](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/style_checker.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/style_checker.yml) -->
 [![Formatting python code](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/code_formatter.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/code_formatter.yml)
 [![Lint Python](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml/badge.svg?branch=staging)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml)
+[![Schedule Testing](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/schedule-testing.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/schedule-testing.yml)
 
 </div>
 
