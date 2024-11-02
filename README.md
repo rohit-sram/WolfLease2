@@ -85,7 +85,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 <!-- - Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md) -->
 
 # 🚀 Improvements
-The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via AWS...etc.
+The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via AWS...etc..
 
 WolfLease previously also lacked essential features like a user-friendly interface, secure data management, and full CRUD functionality. To improve this, we modernized the UI/UX, added login validations, and implemented full CRUD operations, giving users greater control. We also deployed the platform to the cloud for better accessibility and integrated a database to manage data effectively, enhancing security and consistency.
 
