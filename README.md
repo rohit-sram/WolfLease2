@@ -74,9 +74,9 @@
 WolfLease is a comprehensive housing platform tailored for NCSU students seeking off-campus accommodations. Whether you’re looking to find a sublease, connect with a roommate, or secure the perfect apartment near campus, WolfLease streamlines the entire process, making your housing search easy and efficient. With features such as a user-friendly interface, detailed housing listings, secure login, and a robust database, WolfLease aims to provide students with a reliable, seamless leasing experience. Hosted on the cloud and designed with convenience in mind, WOLF Lease is the ultimate one-stop solution for NCSU’s student housing needs.
 
 ## Phase 1
-https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-bd49-f906de124589.mp4
+https://github.com/user-attachments/assets/8d99d027-1d08-459e-8477-89edda0dd540
 
-<!-- ## Phase 2
+
 [![WolfLease2.0](./imgs/WolfLease.png)](https://drive.google.com/file/d/1wke2At9bs9NQ2qyV2rcWIWxFngpunB3k/view?usp=sharing) -->
 
 # 📋 Rubric
