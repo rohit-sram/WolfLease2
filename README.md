@@ -52,8 +52,6 @@
 <a href="https://img.shields.io/github/repo-size/NCSU-SE-Fall-24/WolfLease" alt="WolfLease repo size">
 <img src="https://img.shields.io/github/repo-size/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" /></a>
 </a>
-<a href="https://img.shields.io/tokei/lines/github/NCSU-SE-Fall-24/WolfLease" alt="WolfLease total lines">
-<img src="https://img.shields.io/tokei/lines/github/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" /></a> 
 </a>
 </p>
 
