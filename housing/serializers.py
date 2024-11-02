@@ -7,7 +7,12 @@ from housing import models
 from rest_framework.authtoken.models import Token
 from rest_framework.validators import ValidationError
 from django.contrib.auth.hashers import make_password
+from .models import User, UserPreference 
 
+class UserPreferenceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.UserPreference
+        fields = ['id', 'preference_type']
 
 class UserSerializer(serializers.ModelSerializer):
     """
@@ -24,16 +29,12 @@ class UserSerializer(serializers.ModelSerializer):
         '''User field '''
 
     def create(self, validated_data):
-        """
-            This is create method to create the user using password.
-            Arguments:
-            validated_data {[type]} -- [description]
-            Returns:
-            [type] -- [description]
-        """
-        validated_data['password'] = make_password(validated_data['password'])
-        '''Password validation'''
-        return super(UserSerializer, self).create(validated_data)
+        user_preferences_data = validated_data.pop('user_preferences', [])
+        user = User.objects.create(**validated_data)
+        for preference_data in user_preferences_data:
+            preference, created = UserPreference.objects.get_or_create(**preference_data)
+            user.user_preferences.add(preference)
+        return user
 
 
 class FlatSerializer(serializers.ModelSerializer):
