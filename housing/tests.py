@@ -116,6 +116,8 @@ class OwnerTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0]['contact_number'], '22222')
+
+
 class FlatTests(APITestCase, TestCase):
     """
         This is Flat test class.
@@ -546,6 +548,7 @@ class LeaseTests(APITestCase, TestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(Lease.objects.count(), 0)
 
+
 class InterestedTests(APITestCase, TestCase):
     """
         This is Interested test class.
@@ -607,7 +610,7 @@ class InterestedTests(APITestCase, TestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Interested.objects.count(), 2)
         self.assertEqual(str(User.objects.get()),
-                          str(Interested.objects.last().user_id))
+                         str(Interested.objects.last().user_id))
 
     def test_show_interested(self):
         """
@@ -624,7 +627,11 @@ class InterestedTests(APITestCase, TestCase):
         """
         url = '/interests'
         url = url + '/' + str(Interested.objects.last().id)
-        data = {'flat_id': Flat.objects.last().id, 'user_id': User.objects.last().id, 'apartment_id': Apartment.objects.last().id}
+        data = {
+            'flat_id': Flat.objects.last().id,
+            'user_id': User.objects.last().id,
+            'apartment_id': Apartment.objects.last().id
+        }
         response = self.client.put(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(Interested.objects.count(), 1)
