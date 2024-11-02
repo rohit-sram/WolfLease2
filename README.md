@@ -15,51 +15,51 @@
 <!--Badges-->
 <div align="center">
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/divyang02/WolfLease/Django%20CI)](https://github.com/divyang02/WolfLease/actions)
-[![codecov](https://codecov.io/gh/divyang02/WolfLease/branch/master/graph/badge.svg?token=66DVCQ0T01)](https://codecov.io/gh/divyang02/WolfLease)
-<!-- [![Python Style Checker](https://github.com/divyang02/WolfLease/actions/workflows/style_checker.yml/badge.svg)](https://github.com/divyang02/WolfLease/actions/workflows/style_checker.yml) -->
-[![Formatting python code](https://github.com/divyang02/WolfLease/actions/workflows/code_formatter.yml/badge.svg)](https://github.com/divyang02/WolfLease/actions/workflows/code_formatter.yml)
-[![Lint Python](https://github.com/divyang02/WolfLease/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/divyang02/WolfLease/actions/workflows/main.yml)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NCSU-SE-Fall-24/WolfLease/Django%20CI)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)
+[![codecov](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease/branch/master/graph/badge.svg?token=LgYrIJBlbU)](https://codecov.io/gh/NCSU-SE-Fall-24/WolfLease)
+<!-- [![Python Style Checker](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/style_checker.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/style_checker.yml) -->
+[![Formatting python code](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/code_formatter.yml/badge.svg)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/code_formatter.yml)
+[![Lint Python](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/NCSU-SE-Fall-24/WolfLease/actions/workflows/main.yml)
 
 </div>
 
 <p align="center">
-<a href="https://github.com/divyang02/WolfLease/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/divyang02/WolfLease?style=for-the-badge" alt="WolfLease license" />
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/blob/main/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" alt="WolfLease license" />
 </a>
-<a href="https://github.com/divyang02/WolfLease/fork" target="blank">
-<img src="https://img.shields.io/github/forks/divyang02/WolfLease?style=for-the-badge" alt="WolfLease forks"/>
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/fork" target="blank">
+<img src="https://img.shields.io/github/forks/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" alt="WolfLease forks"/>
 </a>
-<a href="https://github.com/divyang02/WolfLease/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/divyang02/WolfLease?style=for-the-badge" alt="WolfLease stars"/>
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" alt="WolfLease stars"/>
 </a>
-<a href="https://github.com/divyang02/WolfLease/issues" target="blank">
-<img src="https://img.shields.io/github/issues/divyang02/WolfLease?style=for-the-badge" alt="WolfLease issues"/>
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/issues" target="blank">
+<img src="https://img.shields.io/github/issues/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" alt="WolfLease issues"/>
 </a>
-<a href="https://github.com/divyang02/WolfLease/issues" target="blank">
-<img src="https://img.shields.io/github/issues-closed/divyang02/WolfLease?style=for-the-badge&label=issues%20closed" alt="WolfLease issues-closed"/>
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/issues" target="blank">
+<img src="https://img.shields.io/github/issues-closed/NCSU-SE-Fall-24/WolfLease?style=for-the-badge&label=issues%20closed" alt="WolfLease issues-closed"/>
 </a>
-<a href="https://github.com/divyang02/WolfLease/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/divyang02/WolfLease?style=for-the-badge" alt="WolfLease pull-requests"/>
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" alt="WolfLease pull-requests"/>
 </a>
-<a href="https://github.com/divyang02/WolfLease/graphs/contributors" alt="WolfLease Contributors">
-<img src="https://img.shields.io/github/contributors/divyang02/WolfLease?style=for-the-badge" /></a>
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/graphs/contributors" alt="WolfLease Contributors">
+<img src="https://img.shields.io/github/contributors/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" /></a>
 </a>
-<a href="https://github.com/divyang02/WolfLease/graphs/commit-activity" alt="WolfLease commit activity">
-<img src="https://img.shields.io/github/commit-activity/w/divyang02/WolfLease?style=for-the-badge" /></a> 
+<a href="https://github.com/NCSU-SE-Fall-24/WolfLease/graphs/commit-activity" alt="WolfLease commit activity">
+<img src="https://img.shields.io/github/commit-activity/w/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" /></a> 
 </a>
-<a href="https://img.shields.io/github/repo-size/divyang02/WolfLease" alt="WolfLease repo size">
-<img src="https://img.shields.io/github/repo-size/divyang02/WolfLease?style=for-the-badge" /></a>
+<a href="https://img.shields.io/github/repo-size/NCSU-SE-Fall-24/WolfLease" alt="WolfLease repo size">
+<img src="https://img.shields.io/github/repo-size/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" /></a>
 </a>
-<a href="https://img.shields.io/tokei/lines/github/divyang02/WolfLease" alt="WolfLease total lines">
-<img src="https://img.shields.io/tokei/lines/github/divyang02/WolfLease?style=for-the-badge" /></a> 
+<a href="https://img.shields.io/tokei/lines/github/NCSU-SE-Fall-24/WolfLease" alt="WolfLease total lines">
+<img src="https://img.shields.io/tokei/lines/github/NCSU-SE-Fall-24/WolfLease?style=for-the-badge" /></a> 
 </a>
 </p>
 
 <p align="center">
-    <a href="https://github.com/divyang02/WolfLease/issues/new/choose">Report Bug</a>
+    <a href="https://github.com/NCSU-SE-Fall-24/WolfLease/issues/new/choose">Report Bug</a>
     ·
-    <a href="https://github.com/divyang02/WolfLease/issues/new/choose">Request Feature</a>
+    <a href="https://github.com/NCSU-SE-Fall-24/WolfLease/issues/new/choose">Request Feature</a>
 </p>
 
 # 📄 Description
@@ -82,7 +82,7 @@ https://user-images.githubusercontent.com/57044378/194797729-214e39d4-0f62-4468-
 # 📋 Rubric
 
 - Phase 1 Rubric: [link](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/docs/ProjectRubric/Project1Rubric.md)
-<!-- - Phase 2 Rubric: [link](https://github.com/divyang02/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md) -->
+<!-- - Phase 2 Rubric: [link](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/master/docs/Phase2ProjectRubric/Project2Rubric.md) -->
 
 # 🚀 Improvements
 The original WolfLease lacks tons of features, users cannot login and authenticate, frontend and the UI was missing, scalable deployment via AWS...etc..
@@ -106,7 +106,7 @@ With WolfLease 2.0 we solved all the problems with these improvements.
   1. Install <a href="https://www.docker.com/">Docker</a> on your operating system.
   2. Clone the github repository at a preferable location in your system.
   ```
-  git clone https://github.com/divyang02/WolfLease.git
+  git clone https://github.com/NCSU-SE-Fall-24/WolfLease.git
   cd WolfLease
   ```
   3. Run ```docker compose up``` in a new terminal.
@@ -208,7 +208,7 @@ With WolfLease 2.0 we solved all the problems with these improvements.
 
 <h1>🍰 Contributing</h1>
 
-Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/divyang02/WolfLease/pulls).
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/NCSU-SE-Fall-24/WolfLease/pulls).
 
 Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
