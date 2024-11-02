@@ -179,7 +179,7 @@ class InterestedTests(APITestCase, TestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Interested.objects.count(), 2)
         self.assertEqual(str(User.objects.get()),
-                          str(Interested.objects.last().user_id))
+                         str(Interested.objects.last().user_id))
 
     def test_show_interested(self):
         """
