@@ -18,7 +18,7 @@ Total Points from Self-Assessment: 258
 |Use of  style checkers | 3|Pylint used|
 | Use of code  formatters. | 3| Pylint used|
 | Use of syntax checkers. | 3|Pylint used|
-| Use of code coverage |3| [codecov tool](https://app.codecov.io/gh/subodh30/WolfLease)|
+| Use of code coverage |3| |codecov tool|
 | other automated analysis tools| 3|[codecov automation](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)|
 | test cases exist|3|[test directory](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/housing/tests.py)|
 | test cases are routinely executed|3|[Git Action](https://github.com/NCSU-SE-Fall-24/WolfLease/actions)|
@@ -40,7 +40,7 @@ Total Points from Self-Assessment: 258
 | Is your software available for free? |3 |
 | Is your source code publicly available to download, either as a downloadable bundle or via access to a source code repository? |3 |
 | Is your software hosted in an established, third-p
-arty repository like GitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)? |3 |[repo](https://github.com/subodh30/WolfLease)|
+arty repository like GitHub (https://github.com), BitBucket (https://bitbucket.org),LaunchPad (https://launchpad.net) orSourceForge (https://sourceforge.net)? |3 |[repo](https://github.com/NCSU-SE-Fall-24/WolfLease)|
 | Is your documentation clearly available on your website or within your software? |3 | [README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
 | Does your documentation include a "quick start" guide, that provides a short overview of how to use your software with some basic examples of use? | 3 |[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
 | If you provide more extensive documentation, does this provide clear, step-by-step instructions on how to deploy and use your software? |3 |[README.md](https://github.com/NCSU-SE-Fall-24/WolfLease/blob/feat-doc/README.md)|
