@@ -1,0 +1,213 @@
+<div class="row">
+    <div class="col-6">
+        <h1>Users Grid</h1>
+    </div>
+    <div class="col-6">
+        <div class="float-end me-2">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#addUser" 
+                class="btn btn-rounded btn-primary btn-lg pull-right" (click)="fieldCRUDOperation('addOpen')">Add User</button>
+        </div>
+    </div>
+</div>
+<hr>
+
+<div class="card mt-2">
+    <div class="card-body">
+        <p-table #dt2 [columns]="columns" [value]="users" [reorderableColumns]="true"
+            [resizableColumns]="true" [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 15]"
+            [scrollable]="true" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}"
+            [showCurrentPageReport]="true" scrollDirection="both" [globalFilterFields]="['id','contact_email', 'contact_number', 'user_type', 'dob', 'gender', 'pref_smoking', 'pref_drinking', 'pref_veg', 'flat_id']"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+            <ng-template pTemplate="caption">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="float-end">
+                            <p-iconField iconPosition="right" [style]="{'min-width': '300px'}">
+                                <p-inputIcon styleClass="pi pi-search" />
+                                <input type="text" pInputText placeholder="Search"
+                                    (input)="dt2.filterGlobal($any($event.target).value, 'contains')" />
+                            </p-iconField>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th pSortableColumn="{{col.field}}" pResizableColumn pReorderableColumn *ngFor="let col of columns">
+                        {{col.header}} <p-sortIcon field="{{col.field}}" />
+                    </th>
+                    <th pResizableColumn >Action</th>
+                </tr>
+
+            </ng-template>
+
+            <ng-template pTemplate="body" let-product let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns">
+                        {{product[col.field]}}
+                    </td>
+                    <td>
+                        <button data-bs-toggle="modal" data-bs-target="#addUser" type="button" class="btn pull-right background-button-default btn-rounded btn-success" (click)="fieldCRUDOperation('updateOpen', product)">Edit</button>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="emptymessage" let-columns>
+                <tr>
+                    <td [attr.colspan]="columns.length">
+                        No records found
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+    </div>
+</div>
+
+<div class="modal fade" id="addUser" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">{{formModalHeader}}</h1>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="userForm">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="contact_email" class="form-label required">Contact Email</label>
+                            <input type="text" class="form-control" id="contact_email" formControlName="contact_email" aria-describedby="contact_email">
+                            <span class="error" *ngIf="userForm.get('contact_email')?.touched && userForm.get('contact_email')?.valid == false" >
+                                Please Enter Contact Email
+                            </span>
+                        </div>          
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="contact_number" class="form-label required">Contact Number</label>
+                            <input type="text" class="form-control" id="contact_number" formControlName="contact_number" aria-describedby="contact_number">
+                            <span class="error" *ngIf="userForm.get('contact_number')?.touched && userForm.get('contact_number')?.valid == false" >
+                                Please Enter Contact Number
+                            </span>
+                        </div>        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="password" class="form-label required">Password</label>
+                            <input type="password" class="form-control" id="password" formControlName="password" aria-describedby="password" appTwoDigitDirective>
+                            <span class="error" *ngIf="userForm.get('password')?.touched && userForm.get('password')?.valid == false" >
+                                Please Enter Password
+                            </span>
+                        </div>      
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="dob" class="form-label required">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob" formControlName="dob" aria-describedby="dob" appTwoDigitDirective>
+                            <span class="error" *ngIf="userForm.get('dob')?.touched && userForm.get('dob')?.valid == false" >
+                                Please Enter Date of Birth
+                            </span>
+                        </div>      
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="gender" class="form-label required">Gender</label>
+                            <p-dropdown 
+                            formControlName="gender"
+                            [options]="gender"
+                            optionLabel="name"
+                            dataKey="code"
+                            optionValue="code"
+                            placeholder="Select a Gender" />
+                            <span class="error" *ngIf="userForm.get('gender')?.touched && userForm.get('gender')?.valid == false" >
+                                Please Enter Gender
+                            </span>
+                        </div>      
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="user_type" class="form-label required">User type</label>
+                            <p-dropdown 
+                            formControlName="user_type"
+                            [options]="user_type"
+                            optionLabel="name"
+                            dataKey="code"
+                            optionValue="code"
+                            placeholder="Select a User Type" />
+                             <span class="error" *ngIf="userForm.get('user_type')?.touched && userForm.get('user_type')?.valid == false" >
+                                Please Enter User Type Id
+                            </span>
+                        </div>      
+                         
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="input_pref_drinking" class="form-label required">Drinking Preferred ? </label> <span class='error'> {{userForm.get('input_pref_drinking')?.value === null ? 'No' : userForm.get('input_pref_drinking')?.value === true ? 'Yes' : 'No'}} </span>
+                            <p-inputSwitch formControlName="input_pref_drinking" (onChange)="inputSwitchChange('pref_drinking')" />
+                            <span class="error" *ngIf="userForm.get('input_pref_drinking')?.touched && userForm.get('input_pref_drinking')?.valid == false" >
+                                Please select Drinking Preference
+                            </span>
+                        </div>  
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="input_pref_veg" class="form-label required">Vegetarian Preferred ? </label> <span class='error'> {{userForm.get('input_pref_veg')?.value === null ? 'No' : userForm.get('input_pref_veg')?.value === true ? 'Yes' : 'No'}} </span>
+                            <p-inputSwitch formControlName="input_pref_veg" (onChange)="inputSwitchChange('pref_veg')"/>
+                            <span class="error" *ngIf="userForm.get('input_pref_veg')?.touched && userForm.get('input_pref_veg')?.valid == false" >
+                                Please select vegetarian Preference
+                            </span>
+                        </div>    
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="input_pref_smoking" class="form-label required">Smoking Preferred ? </label> <span class='error'> {{userForm.get('input_pref_smoking')?.value === null ? 'No' : userForm.get('input_pref_smoking')?.value === true ? 'Yes' : 'No'}} </span>
+                            <p-inputSwitch formControlName="input_pref_smoking" (onChange)="inputSwitchChange('pref_smoking')" />
+                            <span class="error" *ngIf="userForm.get('input_pref_smoking')?.touched && userForm.get('input_pref_smoking')?.valid == false" >
+                                Please select Smoking Preference
+                            </span>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="flat_id" class="form-label required">Flat Id</label>
+                            <input type="number" class="form-control" id="flat_id" formControlName="flat_id" aria-describedby="flat_id" appTwoDigitDirective>
+                            <span class="error" *ngIf="userForm.get('flat_id')?.touched && userForm.get('flat_id')?.valid == false" >
+                                Please Enter Flat Id
+                            </span>
+                        </div>      
+                    </div>
+                </div>
+                </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-warning mr-auto" *ngIf="this.formOperationScenario === 2" data-bs-target="#deleteConfirmation" data-bs-dismiss="#addUser" data-bs-toggle="modal">{{modalLabel}}</button>
+            <button type="button" (click)="fieldCRUDOperation(this.formOperationScenario === 1 ? 'create' : 'update')" class="btn btn-success" data-bs-dismiss="modal"  [disabled]="!this.userForm.valid">Submit</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="deleteConfirmation"  data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="deleteConfirmation" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="deleteConfirmationTitle">{{modalTitle}}</h1>
+        </div>
+        <div class="modal-body" style="white-space: pre-line">
+          {{modalBody}}
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-bs-dismiss="deleteConfirmation" (click)="fieldCRUDOperation('delete')" data-bs-target="#deleteConfirmation" data-bs-toggle="modal">Submit</button>
+          <button class="btn btn-danger" data-bs-dismiss="deleteConfirmation" data-bs-target="#addUser" data-bs-toggle="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div> 

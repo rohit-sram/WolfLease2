@@ -35,10 +35,8 @@ class LoginView(views.APIView):
         serializer = LoginSerializer(data=self.request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
-
         token, _ = Token.objects.get_or_create(user=user)
         token = str(token)
-
         login(request, user)
         content = {'message': 'Login successfull', 'token': token}
         return Response(content)
@@ -59,4 +57,27 @@ class LogoutView(views.APIView):
         """
         request.user.auth_token.delete()
         content = {'message': 'Logout successfull'}
+        return Response(content)
+
+
+class GetUserView(views.APIView):
+    """
+    Get user details.
+    """
+
+    def get(self, request):
+        """
+        Get user details.
+        Arguments:
+        request {[type]} -- [description]
+        Returns:
+        [type] -- [description]
+        """
+        user = request.user
+        content = {
+            'username': user.username,
+            'email': user.email,
+            'first_name': user.first_name,
+            'last_name': user.last_name
+        }
         return Response(content)

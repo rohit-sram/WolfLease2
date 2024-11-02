@@ -1,11 +1,12 @@
-name: Django CI
+name: Build and Test Django App
 
 on:
   push:
-    branches: [ "master" ]
   pull_request:
-    branches: [ "master" ]
-
+    branches: [ "staging" ]
+env:
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 jobs:
   build:
 
@@ -13,7 +14,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.8]
+        python-version: [3.12]
 
     steps:
     - uses: actions/checkout@v3
@@ -38,7 +39,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        token: "1809182b-a8a7-4d59-b121-5b37f163aaa4"
+        token: ${{ secrets.CODECOV_TOKEN }}
         directory: ./htmlcov/
         env_vars: OS,PYTHON
         fail_ci_if_error: true

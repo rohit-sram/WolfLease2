@@ -11,14 +11,11 @@ export class UserInterfaceBehaviour {
     public userSource:any;
     constructor(){
         this.userSource = new BehaviorSubject<UserInterface>({
-            // "ztoken": "ZFTKXYS2KBNV3O54",
-            // "uid": "jap@miramar",
-            // "lname": "Miramar",
-            // "fname": "Dev",
-            // "authlvl": 100,
-            // "subscriber": "Econo Lodge - TN.Kingsport",
-            // "recordid": "5A9FRBQRJ7S1S0T2",
-            // "subscriberid": "1CL3J9J0732CSDAF"
+            token : '',
+            username : '',
+            email : '',
+            first_name : '',
+            last_name : '',
         });
     }
 
@@ -28,5 +25,8 @@ export class UserInterfaceBehaviour {
     }
     getUser(){
         return this.userSource.value
+    }
+    getToken(){
+        return this.userSource.value.token
     }
 }

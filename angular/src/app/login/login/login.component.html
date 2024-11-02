@@ -13,7 +13,7 @@
                                           <label>Username<span class="text-danger">*</span></label>
                                           <div class="input-group">
                                               <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
-                                              <input type="text" formControlName="userName" class="form-control" placeholder="Enter Username">
+                                              <input type="text" formControlName="username" class="form-control" placeholder="Enter Username">
                                           </div>
                                       </div>
 
@@ -29,6 +29,8 @@
                                       <div class="col-12">
                                           <button type="submit"  (click)="loginClicked()" [disabled]="!loginForm.valid" class="btn btn-primary px-4 float-end mt-4">Login</button>
                                       </div>
+
+                                <h4>Don't have an account? <a routerLink="/register" class="text-primary">Register Now</a> </h4>
                               </form>
                           </div>
                       </div>
