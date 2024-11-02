@@ -7,12 +7,15 @@ from housing import models
 from rest_framework.authtoken.models import Token
 from rest_framework.validators import ValidationError
 from django.contrib.auth.hashers import make_password
-from .models import User, UserPreference 
+from .models import User, UserPreference
+
 
 class UserPreferenceSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = models.UserPreference
         fields = ['id', 'preference_type']
+
 
 class UserSerializer(serializers.ModelSerializer):
     """
@@ -32,7 +35,8 @@ class UserSerializer(serializers.ModelSerializer):
         user_preferences_data = validated_data.pop('user_preferences', [])
         user = User.objects.create(**validated_data)
         for preference_data in user_preferences_data:
-            preference, created = UserPreference.objects.get_or_create(**preference_data)
+            preference, created = UserPreference.objects.get_or_create(
+                **preference_data)
             user.user_preferences.add(preference)
         return user
 

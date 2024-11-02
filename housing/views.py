@@ -3,7 +3,7 @@
 """
 
 from django.shortcuts import render
-from rest_framework import filters, viewsets, generics,status
+from rest_framework import filters, viewsets, generics, status
 from housing import serializers
 from housing import models
 from .models import User, UserPreference
@@ -19,9 +19,11 @@ class UserPreferenceListCreateView(generics.ListCreateAPIView):
     queryset = UserPreference.objects.all()
     serializer_class = UserPreferenceSerializer
 
+
 class UserPreferenceDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = UserPreference.objects.all()
     serializer_class = UserPreferenceSerializer
+
 
 class UserListCreateView(generics.ListCreateAPIView):
     queryset = User.objects.all()
@@ -29,26 +31,33 @@ class UserListCreateView(generics.ListCreateAPIView):
 
     def create(self, request, *args, **kwargs):
         user_preferences_data = request.data.pop('user_preferences', [])
-        
+
         # Check if a user with this email already exists
-        if User.objects.filter(contact_email=request.data.get("contact_email")).exists():
-            return Response({"error": "User with this email already exists."}, status=status.HTTP_400_BAD_REQUEST)
-        
+        if User.objects.filter(
+                contact_email=request.data.get("contact_email")).exists():
+            return Response({"error": "User with this email already exists."},
+                            status=status.HTTP_400_BAD_REQUEST)
+
         user_serializer = self.get_serializer(data=request.data)
         user_serializer.is_valid(raise_exception=True)
         user = user_serializer.save()
 
         # Add user preferences
         for preference_data in user_preferences_data:
-            preference, created = UserPreference.objects.get_or_create(**preference_data)
+            preference, created = UserPreference.objects.get_or_create(
+                **preference_data)
             user.user_preferences.add(preference)
-        
+
         headers = self.get_success_headers(user_serializer.data)
-        return Response(user_serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+        return Response(user_serializer.data,
+                        status=status.HTTP_201_CREATED,
+                        headers=headers)
+
 
 class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
 
 @api_view(['POST'])
 def add_preferences(request, pk):
@@ -58,17 +67,19 @@ def add_preferences(request, pk):
     try:
         user = User.objects.get(pk=pk)
     except User.DoesNotExist:
-        return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
+        return Response({"error": "User not found."},
+                        status=status.HTTP_404_NOT_FOUND)
 
     serializer = UserPreferenceSerializer(data=request.data, many=True)
     if serializer.is_valid():
         for pref_data in serializer.validated_data:
-            preference, created = UserPreference.objects.get_or_create(**pref_data)
+            preference, created = UserPreference.objects.get_or_create(
+                **pref_data)
             user.user_preferences.add(preference)
         return Response(UserSerializer(user).data, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# class UserViewSet(generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIView):
+    # class UserViewSet(generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIView):
     """
     This viewset automatically provides CRUD actions for User model.
     """
@@ -81,6 +92,7 @@ def add_preferences(request, pk):
     queryset = models.User.objects.all()
     '''Database query parameters Userviewset'''
     serializer_class = serializers.UserSerializer
+
 
 class FlatViewSet(generics.ListCreateAPIView,
                   generics.RetrieveUpdateDestroyAPIView):
@@ -124,7 +136,8 @@ class InterestedViewSet(generics.ListCreateAPIView,
     serializer_class = serializers.InterestedSerializer
 
 
-class LeaseViewSet(generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIView):
+class LeaseViewSet(generics.ListCreateAPIView,
+                   generics.RetrieveUpdateDestroyAPIView):
     """
     This viewset automatically provides CRUD actions for Lease model.
     """
@@ -137,7 +150,8 @@ class LeaseViewSet(generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIV
     serializer_class = serializers.LeaseSerializer
 
 
-class ApartmentViewSet(generics.ListCreateAPIView,generics.RetrieveUpdateDestroyAPIView):
+class ApartmentViewSet(generics.ListCreateAPIView,
+                       generics.RetrieveUpdateDestroyAPIView):
     """
     This viewset automatically provides CRUD actions for Apartment model.
     """

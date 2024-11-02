@@ -78,7 +78,7 @@ class UserPreference(models.Model):
 
     def __str__(self):
         return self.preference_type
-    
+
 
 class User(models.Model):
     """

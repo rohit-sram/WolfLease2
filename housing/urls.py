@@ -30,11 +30,16 @@ urlpatterns = [
     path('apartments/<str:pk>', views.ApartmentViewSet.as_view()),
     # path('users', views.UserViewSet.as_view()),
     # path('users/<str:pk>', views.UserViewSet.as_view()),
-    path('userpreferences/', UserPreferenceListCreateView.as_view(), name='user-preference-list-create'),
-    path('userpreferences/<int:pk>/', UserPreferenceDetailView.as_view(), name='user-preference-detail'),
+    path('userpreferences/',
+         UserPreferenceListCreateView.as_view(),
+         name='user-preference-list-create'),
+    path('userpreferences/<int:pk>/',
+         UserPreferenceDetailView.as_view(),
+         name='user-preference-detail'),
     path('users/', UserListCreateView.as_view(), name='user-list-create'),
     path('users/<int:pk>/', UserDetailView.as_view(), name='user-detail'),
-    path('users/<int:pk>/add_preferences/', add_preferences, name='user-add-preferences'),
-
+    path('users/<int:pk>/add_preferences/',
+         add_preferences,
+         name='user-add-preferences'),
 ]
 '''Rest API endpoints'''

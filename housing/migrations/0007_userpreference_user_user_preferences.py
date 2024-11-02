@@ -6,20 +6,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('housing', '0006_alter_apartment_id_alter_flat_id_alter_lease_id_and_more'),
+        ('housing',
+         '0006_alter_apartment_id_alter_flat_id_alter_lease_id_and_more'),
     ]
 
     operations = [
         migrations.CreateModel(
             name='UserPreference',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('preference_type', models.CharField(max_length=20, unique=True)),
+                ('id',
+                 models.BigAutoField(auto_created=True,
+                                     primary_key=True,
+                                     serialize=False,
+                                     verbose_name='ID')),
+                ('preference_type', models.CharField(max_length=20,
+                                                     unique=True)),
             ],
         ),
         migrations.AddField(
             model_name='user',
             name='user_preferences',
-            field=models.ManyToManyField(blank=True, to='housing.userpreference'),
+            field=models.ManyToManyField(blank=True,
+                                         to='housing.userpreference'),
         ),
     ]
