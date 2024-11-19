@@ -1,0 +1,11 @@
+on: push
+name: Python Style Checker
+
+env:
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: andymckay/pycodestyle-action@0.1.3

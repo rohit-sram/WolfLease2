@@ -1,0 +1,16 @@
+name: Close as a feature request
+on:
+  issues:
+    types: [labeled]
+env:
+  DB_HOST: ${{ secrets.DB_HOST }}
+  DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+jobs:
+  build:
+    permissions:
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Close Issue
+      uses: peter-evans/close-issue@v1
+      if: startsWith(github.event.issue.title, 'Feature request')

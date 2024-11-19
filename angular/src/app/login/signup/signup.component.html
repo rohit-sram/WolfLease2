@@ -1,0 +1,77 @@
+<div class="login-page bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <h3 class="mb-3">Sign Up</h3>
+                <div class="bg-white shadow rounded">
+                    <div class="row">
+                        <div class="col-md-7 pe-0">
+                            <div class="form-left h-100 py-5 px-5">
+                                <form class="row g-4" [formGroup]="signUpForm">
+                                    <div class="col-6">
+                                        <label>First Name<span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                            <input type="text" formControlName="first_name" class="form-control" placeholder="Enter First Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label>Last Name<span class="text-danger">*</span></label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                            <input type="text" formControlName="last_name" class="form-control" placeholder="Enter Last Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                            <label>Username<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                <input type="text" formControlName="username" class="form-control" placeholder="Enter Username">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label>Email<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text"><i class="bi bi-person-fill"></i></div>
+                                                <input type="text" formControlName="email" class="form-control" placeholder="Enter Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label>Password<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                <input [type]="show ? 'text' : 'password'" formControlName="password" class="form-control" placeholder="Password">
+                                                <div class="input-group-text" style="cursor: pointer;" (click)="togglePassword()"><i [ngClass]="show ? 'bi bi-eye-slash' : 'bi bi-eye'" id="togglePassword" ></i></div>
+                                            </div>
+                                        </div>
+  
+                                        <div class="col-6">
+                                            <label>Confirm the Password<span class="text-danger">*</span></label>
+                                            <div class="input-group">
+                                                <div class="input-group-text"><i class="bi bi-lock-fill"></i></div>
+                                                <input [type]="show ? 'text' : 'password'" formControlName="password2" class="form-control" placeholder="Re-enter Password">
+                                                <div class="input-group-text" style="cursor: pointer;" (click)="togglePassword()"><i [ngClass]="show ? 'bi bi-eye-slash' : 'bi bi-eye'" id="togglePassword" ></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit"  (click)="signUpClicked()" [disabled]="!signUpForm.valid" class="btn btn-primary px-4 float-end mt-4">Sign Up</button>
+                                        </div>
+                                </form>
+                                <h4>Already have an account?  <a routerLink="/login" class="text-primary">Login Now</a> </h4>
+                            </div>
+                        </div>
+                        <div class="col-md-5 ps-0 d-none d-md-block">
+                            <div class="form-right h-100 text-white text-center pt-5" style="background-color: #ffe6e6;">
+                                <img src="/img/bg-logo.png" height="150">
+                                <h2 class="fs-1 text-dark">Welcome Back!!!</h2>
+                                <h3 class="fs-1 text-dark">Wolflease</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
+  

@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+  
+  web:
+    build: .
+    image: wolflease_image
+
+
+  web_migrate:
+    extends:
+      service: web
+    command: sh -c "python manage.py migrate"
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PASSWORD=${DB_PASSWORD}
+
+  web_run:
+    extends:
+      service: web_migrate
+    ports:
+      - "8000:8000"
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - web_migrate
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PASSWORD=${DB_PASSWORD}
