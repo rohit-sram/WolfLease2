@@ -5,6 +5,10 @@ services:
   web:
     build: .
     image: wolflease_image
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PASSWORD=${DB_PASSWORD}
+
 
 
   web_migrate:

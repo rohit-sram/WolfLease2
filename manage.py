@@ -2,11 +2,14 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from wolf_lease import settings
 
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'wolf_lease.settings')
+    #print(os.environ)
+    print("DATABASE: ", settings.DATABASES)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
