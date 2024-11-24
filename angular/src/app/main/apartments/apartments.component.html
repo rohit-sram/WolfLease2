@@ -21,6 +21,10 @@
             <ng-template pTemplate="caption">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div class="float-start me-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#filterModal" 
+                                class="btn btn-rounded btn-secondary">Filter</button>
+                        </div>
                         <div class="float-end">
                             <p-iconField iconPosition="right" [style]="{'min-width': '300px'}">
                                 <p-inputIcon styleClass="pi pi-search" />
@@ -60,6 +64,44 @@
             </ng-template>
         </p-table>
 
+    </div>
+</div>
+
+<div class="modal fade" id="filterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="filterModalLabel">Filter Apartments</h1>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="filterForm">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="facilities" class="form-label required">Facilities</label>
+                            <input type="text" class="form-control" id="facilities" formControlName="facilities" aria-describedby="facilities">
+                            <span class="error" *ngIf="filterForm.get('facilities')?.touched && filterForm.get('facilities')?.valid == false" >
+                                Please Enter Facilities
+                            </span>
+                        </div>      
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="address" class="form-label required">Address</label>
+                            <input type="text" class="form-control" id="address" formControlName="address" aria-describedby="address">
+                            <span class="error" *ngIf="filterForm.get('address')?.touched && filterForm.get('address')?.valid == false" >
+                                Please Enter Address
+                            </span>
+                        </div>         
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" (click)="applyFilters()" class="btn btn-success" data-bs-dismiss="modal" [disabled]="!this.filterForm.valid">Apply Filters</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
 </div>
 
@@ -112,7 +154,7 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 
   <div class="modal fade" id="deleteConfirmation"  data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" aria-labelledby="deleteConfirmation" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">

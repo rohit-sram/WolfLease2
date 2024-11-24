@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { TableModule } from 'primeng/table';
@@ -36,15 +36,24 @@ export class FlatsComponent {
     associated_apt_id: number;
     lease_id: number;
     floor_number: number;
-  }>
+  }> = [];
+  filteredFlats: Array<{
+    id: number;
+    availability: number;
+    rent_per_room: number;
+    floor_number: number;
+    associated_apt_id: number;
+    lease_id: number;
+  }> = [];
   columns: Column[] = Object.entries(FlatsColumns).map(([key, value]) => ({ field: key, header: value }));
   modalTitle: string;
   modalBody: string;
   modalLabel: string;
   flatForm: FormGroup;
+  filterForm: FormGroup;
   formOperationScenario: number;
   formModalHeader: string;
-  constructor(private flatService: FlatsService, private spinner: NgxSpinnerService, private toast: ToastrService) {
+  constructor(private flatService: FlatsService, private spinner: NgxSpinnerService, private toast: ToastrService, private formBuilder: FormBuilder) {
     this.flats = [];
     this.modalTitle = '';
     this.modalBody = '';
@@ -59,8 +68,45 @@ export class FlatsComponent {
       floor_number: new FormControl('', { validators: [Validators.required] }),
       associated_apt_id: new FormControl('', { validators: [Validators.required] }),
       lease_id: new FormControl(null),
-    })
+    });
+    this.filterForm = new FormGroup({
+      rentMin: new FormControl(''),
+      rentMax: new FormControl(''),
+      availability: new FormControl(''),
+      floorNumber: new FormControl(''),
+      associatedAptId: new FormControl(''),
+      leaseId: new FormControl('')
+    });
   }
+
+  applyFilters() {
+    this.filteredFlats = this.flats.filter(flat => {
+      const rentMin = this.filterForm.get('rentMin')?.value;
+      const rentMax = this.filterForm.get('rentMax')?.value;
+      const availability = this.filterForm.get('availability')?.value;
+      const floorNumber = this.filterForm.get('floorNumber')?.value;
+      const associatedAptId = this.filterForm.get('associatedAptId')?.value;
+      const leaseId = this.filterForm.get('leaseId')?.value;
+  
+      return (
+        (!rentMin || flat.rent_per_room >= rentMin) &&
+        (!rentMax || flat.rent_per_room <= rentMax) &&
+        (availability === '' || flat.availability === Number(availability)) &&
+        (!floorNumber || this.checkFloorNumber(flat.floor_number, floorNumber)) &&
+        (!associatedAptId || flat.associated_apt_id === Number(associatedAptId)) &&
+        (!leaseId || flat.lease_id === Number(leaseId))
+      );
+    });
+  }
+
+  checkFloorNumber(flatFloor: number, filterValue: string): boolean {
+    if (filterValue === '< 2nd floor') {
+      return flatFloor < 2;
+    }
+    // Add more conditions as needed
+    return true;
+  }
+
   inputSwitchChange(fieldName: string) {
     this.flatForm.patchValue({
       [fieldName]: this.flatForm.get(`input_${fieldName}`)!.value === true ? 1 : 0
@@ -70,6 +116,7 @@ export class FlatsComponent {
     try {
       this.spinner.show();
       this.flats = await this.flatService.getFlats();
+      this.filteredFlats = [...this.flats];
     } catch (error) {
       this.toast.error('An error occurred while fetching flats', 'Error');
     } finally {
@@ -78,6 +125,7 @@ export class FlatsComponent {
   }
   async ngOnInit() {
     await this.getFlats();
+    
   }
   addOwner() { }
 
@@ -171,4 +219,5 @@ export class FlatsComponent {
       }
     }
   }
+
 }
