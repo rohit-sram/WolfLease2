@@ -29,7 +29,7 @@ export class UserService {
   async createUser(data: any) {
     try {
       const response = await axios({
-        url: environment.url + 'users',
+        url: environment.url + 'users/',
         method: 'POST',
         headers: {
           'Authorization': 'Token ' + this.userInterfaceBehaviour.getToken()
