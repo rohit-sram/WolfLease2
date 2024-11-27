@@ -6,6 +6,7 @@
 
 from enum import unique
 from ssl import OP_ENABLE_MIDDLEBOX_COMPAT
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 import uuid
 
@@ -124,3 +125,9 @@ class Interested(models.Model):
     '''Flat ID of respective Flat'''
     user_id = models.ForeignKey(to=User, on_delete=models.DO_NOTHING)
     '''User ID of respective User'''
+
+class Review(models.Model):
+    apartment_id = models.ForeignKey(to=Apartment, on_delete=models.DO_NOTHING)
+    user_id = models.ForeignKey(to=User, on_delete=models.DO_NOTHING)
+    rating = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(5)],)
+    review = models.CharField(max_length=500)

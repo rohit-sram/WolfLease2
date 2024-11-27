@@ -41,5 +41,7 @@ urlpatterns = [
     path('users/<int:pk>/add_preferences/',
          add_preferences,
          name='user-add-preferences'),
+    path('reviews', views.ReviewViewSet.as_view()),
+    path('reviews/', views.ReviewViewSet.as_view()),
 ]
 '''Rest API endpoints'''

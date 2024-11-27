@@ -164,3 +164,9 @@ class ApartmentViewSet(generics.ListCreateAPIView,
     queryset = models.Apartment.objects.all()
     '''Database query parameters Apartmentviewset'''
     serializer_class = serializers.ApartmentSerializer
+
+class ReviewViewSet(generics.ListCreateAPIView, generics.RetrieveUpdateDestroyAPIView):
+    search_fields = ['apartment_id', 'user_id', 'rating']
+    filter_backends = (filters.SearchFilter, )
+    queryset = models.Review.objects.all()
+    serializer_class = serializers.ReviewSerializer

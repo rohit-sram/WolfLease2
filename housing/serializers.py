@@ -114,3 +114,8 @@ class ApartmentSerializer(serializers.ModelSerializer):
         '''Apartment model'''
         fields = '__all__'
         '''Apartment fields'''
+
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Review
+        fields = '__all__'
