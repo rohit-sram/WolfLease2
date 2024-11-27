@@ -113,6 +113,9 @@ project_env/
 ENV/
 env.bak/
 venv.bak/
+wolf_env/
+TEMP.html
+angular/package-lock.json
 
 # Spyder project settings
 .spyderproject

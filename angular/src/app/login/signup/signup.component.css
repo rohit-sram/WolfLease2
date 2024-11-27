@@ -1,14 +1,36 @@
 a {
-    text-decoration: none;
-  }
-  .login-page {
-    width: 100%;
-    height: 100vh;
-    display: inline-block;
-    display: flex;
-    align-items: center;
-  }
-  .form-right i {
-    font-size: 100px;
-  }
-  
+  text-decoration: none;
+}
+.login-page {
+  width: 100%;
+  height: 100vh;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+.form-right i {
+  font-size: 100px;
+}
+
+.password-strength-meter {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.strength-meter {
+  height: 4px;
+  background-color: #ddd;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.strength-meter-fill {
+  height: 100%;
+  transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+.strength-message {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+}

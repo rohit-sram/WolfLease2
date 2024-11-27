@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { TableModule } from 'primeng/table';
@@ -31,15 +31,20 @@ export class ApartmentsComponent {
     address: string;
     facilities: string;
     owner_id: number;
-  }>
+  }> = [];
+  filteredApartments: Array<{
+    facilities: string;
+    address: string;
+  }> = [];
   columns: Column[] = Object.entries(ApartmentsColumns).map(([key, value]) => ({ field: key, header: value }));
   modalTitle: string;
   modalBody: string;
   modalLabel: string;
   ownerForm: FormGroup;
+  filterForm: FormGroup;
   formOperationScenario: number;
   formModalHeader: string;
-  constructor(private apartmentService: ApartmentService, private spinner: NgxSpinnerService, private toast: ToastrService) {
+  constructor(private apartmentService: ApartmentService, private spinner: NgxSpinnerService, private toast: ToastrService, private formBuilder: FormBuilder) {
     this.apartments = [];
     this.modalTitle = '';
     this.modalBody = '';
@@ -51,12 +56,37 @@ export class ApartmentsComponent {
       address: new FormControl('', { validators: [Validators.required] }),
       facilities: new FormControl('', { validators: [Validators.required] }),
       id: new FormControl(''),
-    })
+    });
+    this.filterForm = new FormGroup({
+      facilities: new FormControl(''),
+      address: new FormControl('')
+    });
+  }
+
+  applyFilters() {
+    this.filteredApartments = this.apartments.filter(apartment => {
+      const facilities = this.filterForm.get('facilities')?.value;
+      const address = this.filterForm.get('address')?.value;
+  
+      return (
+        (!facilities || apartment.facilities.toLowerCase().includes(facilities.toLowerCase())) &&
+        (!address || apartment.address.toLowerCase().includes(address.toLowerCase()))
+      );
+    });
+  }
+
+  checkFloorNumber(flatFloor: number, filterValue: string): boolean {
+    if (filterValue === '< 2nd floor') {
+      return flatFloor < 2;
+    }
+    // Add more conditions as needed
+    return true;
   }
   async getApartments() {
     try {
       this.spinner.show();
       this.apartments = await this.apartmentService.getApartments();
+      this.filteredApartments = [...this.apartments];
     } catch (error) {
       this.toast.error('An error occurred while fetching apartments', 'Error');
     } finally {

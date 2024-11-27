@@ -21,6 +21,10 @@
             <ng-template pTemplate="caption">
                 <div class="row">
                     <div class="col-lg-12">
+                        <div class="float-start me-2">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#filterModal" 
+                                class="btn btn-rounded btn-secondary">Filter</button>
+                        </div>
                         <div class="float-end">
                             <p-iconField iconPosition="right" [style]="{'min-width': '300px'}">
                                 <p-inputIcon styleClass="pi pi-search" />
@@ -60,6 +64,68 @@
             </ng-template>
         </p-table>
 
+    </div>
+</div>
+
+<div class="modal fade" id="filterModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="filterModalLabel">Filter Apartments</h1>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="filterForm">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="min_rent" class="form-label required">Min Rent per Room</label>
+                            <input type="number" class="form-control" id="min_rent" formControlName="min_rent" aria-describedby="min_rent">
+                            <span class="error" *ngIf="filterForm.get('min_rent')?.touched && filterForm.get('min_rent')?.valid == false" >
+                                Please Enter Minimum Rent
+                            </span>
+                        </div>      
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="max_rent" class="form-label required">Max Rent per Room</label>
+                            <input type="number" class="form-control" id="max_rent" formControlName="max_rent" aria-describedby="max_rent">
+                            <span class="error" *ngIf="filterForm.get('max_rent')?.touched && filterForm.get('max_rent')?.valid == false" >
+                                Please Enter Maximum Rent
+                            </span>
+                        </div>         
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="availability" class="form-label required">Availability</label>
+                            <select class="form-control" id="availability" formControlName="availability">
+                                <option value="">Select Availability</option>
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                            <span class="error" *ngIf="filterForm.get('availability')?.touched && filterForm.get('availability')?.valid == false" >
+                                Please Select Availability
+                            </span>
+                        </div>  
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="preferred_floor" class="form-label required">Preferred Floor Number</label>
+                            <input type="number" class="form-control" id="preferred_floor" formControlName="preferred_floor" aria-describedby="preferred_floor">
+                            <span class="error" *ngIf="filterForm.get('preferred_floor')?.touched && filterForm.get('preferred_floor')?.valid == false" >
+                                Please Enter Preferred Floor Number
+                            </span>
+                        </div>  
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" (click)="applyFilters()" class="btn btn-success" data-bs-dismiss="modal"  [disabled]="!this.filterForm.valid">Apply Filters</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
 </div>
 
@@ -122,7 +188,7 @@
                         </div>  
                     </div>
                 </div>
-                </form>
+            </form>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-warning mr-auto" *ngIf="this.formOperationScenario === 2" data-bs-target="#deleteConfirmation" data-bs-dismiss="#addFlat" data-bs-toggle="modal">{{modalLabel}}</button>
